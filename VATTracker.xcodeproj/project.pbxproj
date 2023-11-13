@@ -7,25 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1305329E2AFE96BF00207064 /* VTTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1305329D2AFE96BF00207064 /* VTTextField.swift */; };
+		130532A02AFE9C9700207064 /* VTLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1305329F2AFE9C9700207064 /* VTLabel.swift */; };
+		130532A22AFEA3EA00207064 /* VTButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130532A12AFEA3EA00207064 /* VTButton.swift */; };
+		130532AB2B0216AA00207064 /* InvoiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130532AA2B0216AA00207064 /* InvoiceTableViewCell.swift */; };
+		130532AD2B0218B700207064 /* VTIncoiceListCellLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130532AC2B0218B700207064 /* VTIncoiceListCellLabel.swift */; };
 		136A414F29E09131008BFFB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136A414E29E09131008BFFB1 /* AppDelegate.swift */; };
 		136A415129E09131008BFFB1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136A415029E09131008BFFB1 /* SceneDelegate.swift */; };
-		136A415329E09131008BFFB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136A415229E09131008BFFB1 /* ViewController.swift */; };
-		136A415629E09131008BFFB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 136A415429E09131008BFFB1 /* Main.storyboard */; };
 		136A415929E09131008BFFB1 /* VATTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 136A415729E09131008BFFB1 /* VATTracker.xcdatamodeld */; };
 		136A415B29E09132008BFFB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 136A415A29E09132008BFFB1 /* Assets.xcassets */; };
 		136A415E29E09132008BFFB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 136A415C29E09132008BFFB1 /* LaunchScreen.storyboard */; };
+		136A416629E09351008BFFB1 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136A416529E09351008BFFB1 /* MainVC.swift */; };
+		136A416829E09443008BFFB1 /* NewInvoiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136A416729E09443008BFFB1 /* NewInvoiceVC.swift */; };
+		136A416A29E29D05008BFFB1 /* CustomTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136A416929E29D05008BFFB1 /* CustomTabbarController.swift */; };
+		136A416C29E2A387008BFFB1 /* InvoiceListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136A416B29E2A387008BFFB1 /* InvoiceListVC.swift */; };
+		13EEA67929E30FFE00A9C0FC /* OverviewTitleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EEA67829E30FFE00A9C0FC /* OverviewTitleVC.swift */; };
+		C614529E31F8B38280FF6783 /* Pods_VATTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCFD5F1B8705273D65C4179F /* Pods_VATTracker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0952A635EB3D33822EE3E5E0 /* Pods-VATTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VATTracker.debug.xcconfig"; path = "Target Support Files/Pods-VATTracker/Pods-VATTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		1305329D2AFE96BF00207064 /* VTTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VTTextField.swift; sourceTree = "<group>"; };
+		1305329F2AFE9C9700207064 /* VTLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VTLabel.swift; sourceTree = "<group>"; };
+		130532A12AFEA3EA00207064 /* VTButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VTButton.swift; sourceTree = "<group>"; };
+		130532AA2B0216AA00207064 /* InvoiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceTableViewCell.swift; sourceTree = "<group>"; };
+		130532AC2B0218B700207064 /* VTIncoiceListCellLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VTIncoiceListCellLabel.swift; sourceTree = "<group>"; };
 		136A414B29E09131008BFFB1 /* VATTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VATTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		136A414E29E09131008BFFB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		136A415029E09131008BFFB1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		136A415229E09131008BFFB1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		136A415529E09131008BFFB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		136A415829E09131008BFFB1 /* VATTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VATTracker.xcdatamodel; sourceTree = "<group>"; };
 		136A415A29E09132008BFFB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		136A415D29E09132008BFFB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		136A415F29E09132008BFFB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		136A416529E09351008BFFB1 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		136A416729E09443008BFFB1 /* NewInvoiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInvoiceVC.swift; sourceTree = "<group>"; };
+		136A416929E29D05008BFFB1 /* CustomTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabbarController.swift; sourceTree = "<group>"; };
+		136A416B29E2A387008BFFB1 /* InvoiceListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceListVC.swift; sourceTree = "<group>"; };
+		13EEA67829E30FFE00A9C0FC /* OverviewTitleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewTitleVC.swift; sourceTree = "<group>"; };
+		539A41F840F6D6321FF70067 /* Pods-VATTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VATTracker.release.xcconfig"; path = "Target Support Files/Pods-VATTracker/Pods-VATTracker.release.xcconfig"; sourceTree = "<group>"; };
+		CCFD5F1B8705273D65C4179F /* Pods_VATTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VATTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +53,90 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C614529E31F8B38280FF6783 /* Pods_VATTracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		130532A32AFEA3F100207064 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				130532A92B02168B00207064 /* Cells */,
+				130532A52B02163D00207064 /* TextFields */,
+				130532A62B02164800207064 /* Labels */,
+				130532A72B02164F00207064 /* Buttons */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		130532A42B02160C00207064 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				136A414E29E09131008BFFB1 /* AppDelegate.swift */,
+				136A415029E09131008BFFB1 /* SceneDelegate.swift */,
+				136A415A29E09132008BFFB1 /* Assets.xcassets */,
+				136A415C29E09132008BFFB1 /* LaunchScreen.storyboard */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		130532A52B02163D00207064 /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				1305329D2AFE96BF00207064 /* VTTextField.swift */,
+			);
+			path = TextFields;
+			sourceTree = "<group>";
+		};
+		130532A62B02164800207064 /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				1305329F2AFE9C9700207064 /* VTLabel.swift */,
+				130532AC2B0218B700207064 /* VTIncoiceListCellLabel.swift */,
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
+		130532A72B02164F00207064 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				130532A12AFEA3EA00207064 /* VTButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		130532A82B02166700207064 /* Various */ = {
+			isa = PBXGroup;
+			children = (
+				136A416929E29D05008BFFB1 /* CustomTabbarController.swift */,
+			);
+			path = Various;
+			sourceTree = "<group>";
+		};
+		130532A92B02168B00207064 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				130532AA2B0216AA00207064 /* InvoiceTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		130532AE2B0226AC00207064 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		136A414229E09131008BFFB1 = {
 			isa = PBXGroup;
 			children = (
 				136A414D29E09131008BFFB1 /* VATTracker */,
 				136A414C29E09131008BFFB1 /* Products */,
+				A401B1680D76486B696BAABC /* Pods */,
+				6E148BB75C94423A3BF25A0A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,16 +151,43 @@
 		136A414D29E09131008BFFB1 /* VATTracker */ = {
 			isa = PBXGroup;
 			children = (
-				136A414E29E09131008BFFB1 /* AppDelegate.swift */,
-				136A415029E09131008BFFB1 /* SceneDelegate.swift */,
-				136A415229E09131008BFFB1 /* ViewController.swift */,
-				136A415429E09131008BFFB1 /* Main.storyboard */,
-				136A415A29E09132008BFFB1 /* Assets.xcassets */,
-				136A415C29E09132008BFFB1 /* LaunchScreen.storyboard */,
+				130532AE2B0226AC00207064 /* Models */,
+				136A416D29E2A924008BFFB1 /* Screens */,
+				130532A42B02160C00207064 /* Support */,
+				130532A32AFEA3F100207064 /* Custom Views */,
+				130532A82B02166700207064 /* Various */,
 				136A415F29E09132008BFFB1 /* Info.plist */,
 				136A415729E09131008BFFB1 /* VATTracker.xcdatamodeld */,
 			);
 			path = VATTracker;
+			sourceTree = "<group>";
+		};
+		136A416D29E2A924008BFFB1 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				136A416529E09351008BFFB1 /* MainVC.swift */,
+				136A416729E09443008BFFB1 /* NewInvoiceVC.swift */,
+				136A416B29E2A387008BFFB1 /* InvoiceListVC.swift */,
+				13EEA67829E30FFE00A9C0FC /* OverviewTitleVC.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		6E148BB75C94423A3BF25A0A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCFD5F1B8705273D65C4179F /* Pods_VATTracker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A401B1680D76486B696BAABC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0952A635EB3D33822EE3E5E0 /* Pods-VATTracker.debug.xcconfig */,
+				539A41F840F6D6321FF70067 /* Pods-VATTracker.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +197,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 136A416229E09132008BFFB1 /* Build configuration list for PBXNativeTarget "VATTracker" */;
 			buildPhases = (
+				9F65AB323731DD7324A3ECEB /* [CP] Check Pods Manifest.lock */,
 				136A414729E09131008BFFB1 /* Sources */,
 				136A414829E09131008BFFB1 /* Frameworks */,
 				136A414929E09131008BFFB1 /* Resources */,
+				BAFCB108E800EF6ECDDF3382 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,35 +252,77 @@
 			files = (
 				136A415E29E09132008BFFB1 /* LaunchScreen.storyboard in Resources */,
 				136A415B29E09132008BFFB1 /* Assets.xcassets in Resources */,
-				136A415629E09131008BFFB1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9F65AB323731DD7324A3ECEB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VATTracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BAFCB108E800EF6ECDDF3382 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VATTracker/Pods-VATTracker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VATTracker/Pods-VATTracker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VATTracker/Pods-VATTracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		136A414729E09131008BFFB1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				136A415329E09131008BFFB1 /* ViewController.swift in Sources */,
+				130532A02AFE9C9700207064 /* VTLabel.swift in Sources */,
+				136A416629E09351008BFFB1 /* MainVC.swift in Sources */,
 				136A414F29E09131008BFFB1 /* AppDelegate.swift in Sources */,
+				130532AD2B0218B700207064 /* VTIncoiceListCellLabel.swift in Sources */,
 				136A415929E09131008BFFB1 /* VATTracker.xcdatamodeld in Sources */,
+				1305329E2AFE96BF00207064 /* VTTextField.swift in Sources */,
 				136A415129E09131008BFFB1 /* SceneDelegate.swift in Sources */,
+				136A416C29E2A387008BFFB1 /* InvoiceListVC.swift in Sources */,
+				136A416A29E29D05008BFFB1 /* CustomTabbarController.swift in Sources */,
+				130532A22AFEA3EA00207064 /* VTButton.swift in Sources */,
+				130532AB2B0216AA00207064 /* InvoiceTableViewCell.swift in Sources */,
+				13EEA67929E30FFE00A9C0FC /* OverviewTitleVC.swift in Sources */,
+				136A416829E09443008BFFB1 /* NewInvoiceVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		136A415429E09131008BFFB1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				136A415529E09131008BFFB1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		136A415C29E09132008BFFB1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -286,6 +450,7 @@
 		};
 		136A416329E09132008BFFB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0952A635EB3D33822EE3E5E0 /* Pods-VATTracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -296,9 +461,10 @@
 				INFOPLIST_FILE = VATTracker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,6 +480,7 @@
 		};
 		136A416429E09132008BFFB1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 539A41F840F6D6321FF70067 /* Pods-VATTracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -324,9 +491,10 @@
 				INFOPLIST_FILE = VATTracker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
