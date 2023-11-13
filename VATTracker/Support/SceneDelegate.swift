@@ -16,7 +16,47 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+        window = UIWindow(frame: windowScene.coordinateSpace.bounds)
+        window?.windowScene = windowScene
+        window?.rootViewController = createTabbar()
+        window?.makeKeyAndVisible()
+        
+    }
+    
+    func createMainNC() -> UINavigationController {
+        let mainVC = MainVC()
+        mainVC.title = "Overview"
+        mainVC.tabBarItem.image = UIImage(systemName: "dollarsign.square")
+        
+        return UINavigationController(rootViewController: mainVC)
+    }
+    
+    func createNewInvoiceVC() -> UINavigationController {
+        let invoiceVC = NewInvoiceVC()
+        invoiceVC.title = "Add Invoice"
+        invoiceVC.tabBarItem.image = UIImage(systemName: "plus.circle")
+        
+        return UINavigationController(rootViewController: invoiceVC)
+    }
+    
+    
+    func createInvoiceListVC() -> UINavigationController {
+        let invoiceListVC = InvoiceListVC()
+        invoiceListVC.title = "Invoices"
+        invoiceListVC.tabBarItem.image = UIImage(systemName: "list.bullet.clipboard")
+        
+        return UINavigationController(rootViewController: invoiceListVC)
+    }
+    
+    func createTabbar() -> UITabBarController {
+        let tabbar = CustomTabbarController()
+        UITabBar.appearance().tintColor = .systemGreen
+        tabbar.viewControllers = [createMainNC(), createNewInvoiceVC(), createInvoiceListVC()]
+      
+        
+        return tabbar
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

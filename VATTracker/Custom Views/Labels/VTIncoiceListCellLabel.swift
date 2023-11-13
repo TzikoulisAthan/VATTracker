@@ -1,13 +1,13 @@
 //
-//  VTButton.swift
+//  VTIncoiceListCellLabel.swift
 //  VATTracker
 //
-//  Created by Athanasios Tzikoulis on 10/11/23.
+//  Created by Athanasios Tzikoulis on 13/11/23.
 //
 
 import UIKit
 
-class VTButton: UIButton {
+class VTIncoiceListCellLabel: UILabel {
 
     /*
     // Only override draw() if you perform custom drawing.

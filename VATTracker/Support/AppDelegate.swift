@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import DropDown
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        if #available(iOS 15, *) {
+            let appearance = UINavigationBarAppearance()
+            let tabAppearance = UITabBarAppearance()
+            
+            appearance.configureWithOpaqueBackground()
+            tabAppearance.configureWithOpaqueBackground()
+            UINavigationBar.appearance().standardAppearance = appearance
+            UINavigationBar.appearance().scrollEdgeAppearance = appearance
+            UITabBar.appearance().scrollEdgeAppearance = tabAppearance
+            UITabBar.appearance().standardAppearance = tabAppearance
+        }
+        
+        DropDown.startListeningToKeyboard()
+        
         return true
     }
 
