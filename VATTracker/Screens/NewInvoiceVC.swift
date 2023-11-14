@@ -49,7 +49,7 @@ class NewInvoiceVC: UIViewController {
        let radiogroup = RadioGroup(titles: ["Expense", "Income"])
         radiogroup.isVertical = false
         radiogroup.tintColor = .black
-        
+        radiogroup.selectedIndex = 0
         return radiogroup
     }()
     
@@ -112,6 +112,7 @@ class NewInvoiceVC: UIViewController {
         } else {
             let totalAmount = "-\(totalAmountTextField.text!)"
             let vatAmount = "-\(vatAmountTextField.text!)"
+            newInvoice.date = datePicker.date
             newInvoice.issuer = invoiceIssuerTextField.text
             newInvoice.number = invoiceNumberTextField.text
             newInvoice.totalAmount = totalAmount
@@ -140,6 +141,7 @@ class NewInvoiceVC: UIViewController {
             textfield.text = ""
         }
         
+        radioGroup.selectedIndex = 0
         invoiceIssuerTextField.becomeFirstResponder()
     }
     

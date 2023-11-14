@@ -93,7 +93,8 @@ extension InvoiceListVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: InvoiceTableViewCell.reuseIdentifier, for: indexPath) as! InvoiceTableViewCell
-        //cell.dateLabelText.text = String(invoiceList[indexPath.row].date)
+        
+        cell.dateLabelText.text = String(dateToString(inputDate: invoiceList[indexPath.row].date!))
         
         let totalAmount = invoiceList[indexPath.row].totalAmount
         let vatAmount = invoiceList[indexPath.row].vatAmount

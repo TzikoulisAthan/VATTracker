@@ -21,6 +21,7 @@
 		136A416829E09443008BFFB1 /* NewInvoiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136A416729E09443008BFFB1 /* NewInvoiceVC.swift */; };
 		136A416A29E29D05008BFFB1 /* CustomTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136A416929E29D05008BFFB1 /* CustomTabbarController.swift */; };
 		136A416C29E2A387008BFFB1 /* InvoiceListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136A416B29E2A387008BFFB1 /* InvoiceListVC.swift */; };
+		13AFA3B62B03C30D000D5D51 /* DateToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AFA3B52B03C30D000D5D51 /* DateToString.swift */; };
 		13EEA67929E30FFE00A9C0FC /* OverviewTitleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EEA67829E30FFE00A9C0FC /* OverviewTitleVC.swift */; };
 		C614529E31F8B38280FF6783 /* Pods_VATTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCFD5F1B8705273D65C4179F /* Pods_VATTracker.framework */; };
 /* End PBXBuildFile section */
@@ -43,6 +44,7 @@
 		136A416729E09443008BFFB1 /* NewInvoiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInvoiceVC.swift; sourceTree = "<group>"; };
 		136A416929E29D05008BFFB1 /* CustomTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabbarController.swift; sourceTree = "<group>"; };
 		136A416B29E2A387008BFFB1 /* InvoiceListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceListVC.swift; sourceTree = "<group>"; };
+		13AFA3B52B03C30D000D5D51 /* DateToString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateToString.swift; sourceTree = "<group>"; };
 		13EEA67829E30FFE00A9C0FC /* OverviewTitleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewTitleVC.swift; sourceTree = "<group>"; };
 		539A41F840F6D6321FF70067 /* Pods-VATTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VATTracker.release.xcconfig"; path = "Target Support Files/Pods-VATTracker/Pods-VATTracker.release.xcconfig"; sourceTree = "<group>"; };
 		CCFD5F1B8705273D65C4179F /* Pods_VATTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VATTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,6 +153,7 @@
 		136A414D29E09131008BFFB1 /* VATTracker */ = {
 			isa = PBXGroup;
 			children = (
+				13AFA3B42B03C2FC000D5D51 /* Utilities */,
 				130532AE2B0226AC00207064 /* Models */,
 				136A416D29E2A924008BFFB1 /* Screens */,
 				130532A42B02160C00207064 /* Support */,
@@ -171,6 +174,14 @@
 				13EEA67829E30FFE00A9C0FC /* OverviewTitleVC.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		13AFA3B42B03C2FC000D5D51 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				13AFA3B52B03C30D000D5D51 /* DateToString.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		6E148BB75C94423A3BF25A0A /* Frameworks */ = {
@@ -309,6 +320,7 @@
 				136A414F29E09131008BFFB1 /* AppDelegate.swift in Sources */,
 				130532AD2B0218B700207064 /* VTIncoiceListCellLabel.swift in Sources */,
 				136A415929E09131008BFFB1 /* VATTracker.xcdatamodeld in Sources */,
+				13AFA3B62B03C30D000D5D51 /* DateToString.swift in Sources */,
 				1305329E2AFE96BF00207064 /* VTTextField.swift in Sources */,
 				136A415129E09131008BFFB1 /* SceneDelegate.swift in Sources */,
 				136A416C29E2A387008BFFB1 /* InvoiceListVC.swift in Sources */,
