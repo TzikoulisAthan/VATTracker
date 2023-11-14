@@ -94,10 +94,27 @@ extension InvoiceListVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: InvoiceTableViewCell.reuseIdentifier, for: indexPath) as! InvoiceTableViewCell
         //cell.dateLabelText.text = String(invoiceList[indexPath.row].date)
-        cell.invoiceIssuerLabelText.text = invoiceList[indexPath.row].issuer
-        cell.invoiceNumberLabelText.text = invoiceList[indexPath.row].number
-        cell.totalAmountLabelText.text = invoiceList[indexPath.row].totalAmount
-        cell.vatAmountLabelText.text = invoiceList[indexPath.row].vatAmount
+        
+        let totalAmount = invoiceList[indexPath.row].totalAmount
+        let vatAmount = invoiceList[indexPath.row].vatAmount
+        let prefix = "-"
+        
+        if totalAmount!.hasPrefix(prefix), vatAmount!.hasPrefix(prefix) {
+            cell.invoiceIssuerLabelText.text = invoiceList[indexPath.row].issuer
+            cell.invoiceNumberLabelText.text = invoiceList[indexPath.row].number
+            cell.totalAmountLabelText.text = String(totalAmount!.dropFirst(prefix.count))
+            cell.vatAmountLabelText.text = String(vatAmount!.dropFirst(prefix.count))
+            cell.totalAmountLabelText.textColor = .green
+            cell.vatAmountLabelText.textColor = .green
+        } else {
+            cell.invoiceIssuerLabelText.text = invoiceList[indexPath.row].issuer
+            cell.invoiceNumberLabelText.text = invoiceList[indexPath.row].number
+            cell.totalAmountLabelText.text = invoiceList[indexPath.row].totalAmount
+            cell.vatAmountLabelText.text = invoiceList[indexPath.row].vatAmount
+            cell.totalAmountLabelText.textColor = .red
+            cell.vatAmountLabelText.textColor = .red
+        }
+       
         
         return cell
     }

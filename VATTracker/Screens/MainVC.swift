@@ -57,9 +57,14 @@ class MainVC: UIViewController {
         
         var totalAmount: Double = 0
         
-        for i in 0...invoiceList.count-1 {
-            totalAmount += Double(invoiceList[i].totalAmount ?? "0")!
+        if invoiceList.count-1 >= 0 {
+            for i in 0...invoiceList.count-1 {
+                totalAmount += Double(invoiceList[i].totalAmount ?? "0")!
+            }
+        } else {
+            print("Invoice list is empty")
         }
+        
         
         return totalAmount
     }
@@ -68,9 +73,14 @@ class MainVC: UIViewController {
     private func getTotalVatAmount() -> Double {
         var totalVatAmount: Double = 0
         
-        for i in 0...invoiceList.count-1 {
-            totalVatAmount += Double(invoiceList[i].vatAmount ?? "0")!
+        if invoiceList.count-1 >= 0 {
+            for i in 0...invoiceList.count-1 {
+                totalVatAmount += Double(invoiceList[i].vatAmount ?? "0")!
+            }
+        } else {
+            print("Invoice list is empty")
         }
+        
         
         return totalVatAmount
     }

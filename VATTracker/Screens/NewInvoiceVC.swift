@@ -98,12 +98,10 @@ class NewInvoiceVC: UIViewController {
             return
         }
         
-        //TODO: Create radio button for the user to select if the invoice is income or expense.
-        //      If is income then use string interpolation when adding to database "-\(income)" so that it adds the minus
-        
         let newInvoice = Invoice(context: self.context)
         
         if radioGroup.selectedIndex == 0 {
+            newInvoice.date = datePicker.date
             newInvoice.issuer = invoiceIssuerTextField.text
             newInvoice.number = invoiceNumberTextField.text
             newInvoice.totalAmount = totalAmountTextField.text
