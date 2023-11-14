@@ -36,9 +36,7 @@ class InvoiceListVC: UIViewController {
     }
     
     //MARK: - Functions
-    private func loadInvoices() {
-        
-        let request = Invoice.fetchRequest()
+    private func loadInvoices(with request: NSFetchRequest<Invoice> = Invoice.fetchRequest()) {
         
         do {
             invoiceList = try context.fetch(request)
@@ -57,6 +55,8 @@ class InvoiceListVC: UIViewController {
         tableView.rowHeight = (UIScreen.main.bounds.height) / 3
         
         tableView.register(InvoiceTableViewCell.self, forCellReuseIdentifier: InvoiceTableViewCell.reuseIdentifier)
+        
+        searchBar.delegate = self
     }
     
     
@@ -115,10 +115,50 @@ extension InvoiceListVC: UITableViewDelegate, UITableViewDataSource {
             cell.totalAmountLabelText.textColor = .red
             cell.vatAmountLabelText.textColor = .red
         }
-       
-        
         return cell
     }
     
     
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+    
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            tableView.beginUpdates()
+            
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            context.delete(invoiceList[indexPath.row])
+            invoiceList.remove(at: indexPath.row)
+            
+            tableView.endUpdates()
+        }
+    }
+}
+
+
+//MARK: - SearchBar Methods
+extension InvoiceListVC: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let request: NSFetchRequest<Invoice> = Invoice.fetchRequest()
+        
+        guard let searchText = searchBar.text else { return }
+        
+        request.predicate = NSPredicate(format: "issuer CONTAINS[cd] %@", searchText)
+        request.sortDescriptors = [NSSortDescriptor(key: "issuer", ascending: true)]
+        
+       loadInvoices(with: request)
+        
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text?.count == 0 {
+            loadInvoices()
+            
+            DispatchQueue.main.async {
+                searchBar.resignFirstResponder()
+            }
+        }
+    }
 }

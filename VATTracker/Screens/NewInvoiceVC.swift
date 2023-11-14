@@ -18,7 +18,7 @@ class NewInvoiceVC: UIViewController {
     var loadedInvoices = [Invoice]()
     
     //MARK: - UI Components
-    let datePickerLaber = VTLabel(labelTitle: "Issuing Date:")
+    let datePickerLaber = VTLabel(labelTitle: "Issue Date:")
     let invoiceIssuerLabel = VTLabel(labelTitle: "Invoice Issuer:")
     let invoiceNumberLabel = VTLabel(labelTitle: "Invoice Number:")
     let totalAmountLabel = VTLabel(labelTitle: "Total Amount:")
