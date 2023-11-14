@@ -6,11 +6,17 @@
 //
 
 import UIKit
+import CoreData
 
 class MainVC: UIViewController {
     
-    let titleView = OverviewTitleVC()
+    //MARK: - Variables
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
+    var invoiceList = [Invoice]()
     
+    //MARK: - UI Elements
+    let titleView = OverviewTitleVC()
     let stackView = UIStackView()
     
 
@@ -25,37 +31,57 @@ class MainVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(true, animated: false)
+        
+        loadInvoices()
+        let x = getTotalAmount()
+        print(x)
+        let y = getTotalVatAmount()
+        print(y)
+    }
+    
+    //MARK: - Functions
+    private func loadInvoices() {
+        
+        let request = Invoice.fetchRequest()
+        
+        do {
+            invoiceList = try context.fetch(request)
+        } catch {
+            print("Error fetching data\(error)")
+        }
     }
     
     
+    //MARK: - Data manipulation functions
+    private func getTotalAmount() -> Double {
+        
+        var totalAmount: Double = 0
+        
+        for i in 0...invoiceList.count-1 {
+            totalAmount += Double(invoiceList[i].totalAmount ?? "0")!
+        }
+        
+        return totalAmount
+    }
+    
+    
+    private func getTotalVatAmount() -> Double {
+        var totalVatAmount: Double = 0
+        
+        for i in 0...invoiceList.count-1 {
+            totalVatAmount += Double(invoiceList[i].vatAmount ?? "0")!
+        }
+        
+        return totalVatAmount
+    }
+    
+    //MARK: - UI Methods
     func addTitleView() {
         addChild(titleView)
         view.addSubview(titleView.view)
         titleView.didMove(toParent: self)
         setTitleViewConstraints()
     }
-    
-    
-//    func addToStackView() {
-//        stackView.addArrangedSubview(account1.view)
-//        stackView.addArrangedSubview(account2.view)
-//    }
-//    
-//    
-//    func configureStackView() {
-//        view.addSubview(stackView)
-//        stackView.translatesAutoresizingMaskIntoConstraints = false
-//        
-//        stackView.axis = .vertical
-//        stackView.spacing = 10
-//        
-//        NSLayoutConstraint.activate([
-//            stackView.topAnchor.constraint(equalTo: titleView.bottomLayoutGuide.bottomAnchor, constant: 20),
-//            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
-//            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 10)
-//        ])
-//    }
-//    
     
     func setTitleViewConstraints() {
         titleView.view.translatesAutoresizingMaskIntoConstraints = false

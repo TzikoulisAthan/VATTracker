@@ -27,8 +27,7 @@ class InvoiceListVC: UIViewController {
 
         configureTableView()
         configureUI()
-        
-        loadInvoices()
+
     }
     
     

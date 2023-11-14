@@ -64,7 +64,7 @@ class NewInvoiceVC: UIViewController {
     
     //MARK: - Button Methods
     @objc func saveButtonTapped() {
-        //TODO: Implement function to check for legit textfield inputs
+        //TODO: Refine textfield validation
         guard invoiceIssuerTextField.text?.isEmpty == false else {
             print("Fill invoiceissuer textfield!")
             return
@@ -87,6 +87,9 @@ class NewInvoiceVC: UIViewController {
             print("Fill vatamount textfield!")
             return
         }
+        
+        //TODO: Create radio button for the user to select if the invoice is income or expense.
+        //      If is income then use string interpolation when adding to database "-\(income)" so that it adds the minus
         
         let newInvoice = Invoice(context: self.context)
         newInvoice.issuer = invoiceIssuerTextField.text
