@@ -6,5 +6,5 @@ target 'VATTracker' do
   use_frameworks!
 
   # Pods for VATTracker
-pod 'DropDown', '2.3.2'
+pod 'RadioGroup'
 end
