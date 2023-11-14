@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import RadioGroup
 
 class NewInvoiceVC: UIViewController {
   
@@ -41,6 +42,15 @@ class NewInvoiceVC: UIViewController {
         datepicker.datePickerMode = .date
         datepicker.timeZone = .current
         return datepicker
+    }()
+    
+    
+    let radioGroup: RadioGroup = {
+       let radiogroup = RadioGroup(titles: ["Expense", "Income"])
+        radiogroup.isVertical = false
+        radiogroup.tintColor = .black
+        
+        return radiogroup
     }()
     
     
@@ -92,13 +102,27 @@ class NewInvoiceVC: UIViewController {
         //      If is income then use string interpolation when adding to database "-\(income)" so that it adds the minus
         
         let newInvoice = Invoice(context: self.context)
-        newInvoice.issuer = invoiceIssuerTextField.text
-        newInvoice.number = invoiceNumberTextField.text
-        newInvoice.totalAmount = totalAmountTextField.text
-        newInvoice.vatAmount = vatAmountTextField.text
         
-        invoices.append(newInvoice)
-        saveInvoice()
+        if radioGroup.selectedIndex == 0 {
+            newInvoice.issuer = invoiceIssuerTextField.text
+            newInvoice.number = invoiceNumberTextField.text
+            newInvoice.totalAmount = totalAmountTextField.text
+            newInvoice.vatAmount = vatAmountTextField.text
+            
+            invoices.append(newInvoice)
+            saveInvoice()
+        } else {
+            let totalAmount = "-\(totalAmountTextField.text!)"
+            let vatAmount = "-\(vatAmountTextField.text!)"
+            newInvoice.issuer = invoiceIssuerTextField.text
+            newInvoice.number = invoiceNumberTextField.text
+            newInvoice.totalAmount = totalAmount
+            newInvoice.vatAmount = vatAmount
+            
+            invoices.append(newInvoice)
+            saveInvoice()
+        }
+        
         
     }
     
@@ -140,7 +164,7 @@ class NewInvoiceVC: UIViewController {
         view.backgroundColor = .systemBackground
         
         let views = [invoiceIssuerLabel, invoiceNumberLabel, totalAmountLabel, vatAmountLabel, invoiceIssuerTextField, invoiceNumberTextField,
-                     totalAmountTextField, vatAmountTextField, saveButton, cancelButton, datePicker, datePickerLaber
+                     totalAmountTextField, vatAmountTextField, saveButton, cancelButton, datePicker, datePickerLaber, radioGroup
         ]
         
         for everyView in views {
@@ -148,6 +172,7 @@ class NewInvoiceVC: UIViewController {
         }
         
         datePicker.translatesAutoresizingMaskIntoConstraints = false
+        radioGroup.translatesAutoresizingMaskIntoConstraints = false
         
         let padding: CGFloat = 15
         let groupPadding: CGFloat = 2
@@ -207,7 +232,12 @@ class NewInvoiceVC: UIViewController {
             vatAmountTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
             vatAmountTextField.heightAnchor.constraint(equalToConstant: 40),
             
-            saveButton.topAnchor.constraint(equalTo: vatAmountTextField.bottomAnchor, constant: 40),
+            
+            radioGroup.topAnchor.constraint(equalTo: vatAmountTextField.bottomAnchor, constant: padding),
+            radioGroup.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            radioGroup.heightAnchor.constraint(equalToConstant: 25),
+            
+            saveButton.topAnchor.constraint(equalTo: radioGroup.bottomAnchor, constant: 25),
             saveButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             saveButton.widthAnchor.constraint(equalToConstant: 140),
             saveButton.heightAnchor.constraint(equalToConstant: 70),

@@ -1,16 +1,20 @@
 PODS:
-  - DropDown (2.3.2)
+  - RadioGroup (1.4.6):
+    - SweeterSwift
+  - SweeterSwift (1.2.3)
 
 DEPENDENCIES:
-  - DropDown (= 2.3.2)
+  - RadioGroup
 
 SPEC REPOS:
   trunk:
-    - DropDown
+    - RadioGroup
+    - SweeterSwift
 
 SPEC CHECKSUMS:
-  DropDown: 7f87abecc28f9b4edad810fe1211c5c018c257e5
+  RadioGroup: 5dbb3cc52b512b7acce45833c9aecf156d22d2db
+  SweeterSwift: 3910bab8ba35b6964d5169a3c52b2c87d930b61c
 
-PODFILE CHECKSUM: 929c1f743cee35511a8f6e380091d1d7ee742010
+PODFILE CHECKSUM: 6738eeacfb9c58f2e11d49af0740edf14214afa0
 
 COCOAPODS: 1.12.0

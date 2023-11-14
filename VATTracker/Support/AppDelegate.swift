@@ -7,7 +7,7 @@
 
 import UIKit
 import CoreData
-import DropDown
+
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -28,7 +28,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UITabBar.appearance().standardAppearance = tabAppearance
         }
         
-        DropDown.startListeningToKeyboard()
         
         return true
     }

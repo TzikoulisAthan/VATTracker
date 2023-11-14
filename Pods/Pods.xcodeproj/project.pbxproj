@@ -7,119 +7,138 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		34D86F4481D9328BF45B637B906B3122 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		43CD4B26F3F41CC43145896C6D3E3E88 /* Pods-VATTracker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 66BA7D1C6AC1DF33E73D9413D78A314B /* Pods-VATTracker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		515E22E4255B6073C1897BDDB091A2B8 /* DropDown+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87586FE2C9DECB6AE7FCA3238E4A1B8 /* DropDown+Appearance.swift */; };
-		655847ADA4324F2B2061DF1942897869 /* Pods-VATTracker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B832A920E17278D94433447463AE80 /* Pods-VATTracker-dummy.m */; };
-		68E1653C561E14BBEAC9CF4873570D58 /* DropDownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEBC6D732E1B0C41C6A8D03A8C81CF47 /* DropDownCell.xib */; };
-		74012B832FAF67F8D62A2B27CDAFE8B5 /* DPDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3761A77A038E79C8451C03293CDA4FC0 /* DPDConstants.swift */; };
-		82F11851AB4894BEF2EF6FDA89DDA367 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		84459C4824533C9C4FD12AFC941F3CE1 /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCC1AD54C344AFD4E184B9586BFE267 /* DropDown.swift */; };
-		89A72A55273CE358DC4E7600F785C37B /* DPDKeyboardListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBB2377069976EC65992A59335066D3 /* DPDKeyboardListener.swift */; };
-		907338727C09F65DB75AA7AB9E10C3B4 /* DropDown-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AF17E1BF2597D8F37F69DB34CA024E5C /* DropDown-dummy.m */; };
-		B73E510E851686F8184E26986A470458 /* DPDUIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451F84589A96D52448FD74E261268404 /* DPDUIView+Extension.swift */; };
-		BDC10974A8641F01C5665C61EA37A153 /* DropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EA092CDFBD4C66A29A9CDEA1DE78E1 /* DropDownCell.swift */; };
-		E0A8C46EEE733B55971B1CC5ED65C9AA /* DropDown-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F8F61850F82D6CC477FAF8326336FD5A /* DropDown-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		018B0BE343666DCDB4B4659AD6485E45 /* Pods-VATTracker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B832A920E17278D94433447463AE80 /* Pods-VATTracker-dummy.m */; };
+		079581155C43753422F46919E7908775 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		17A1BA4CFBC241254CCB321B04E25A46 /* NSAttributedString+Sweeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624617538062F6520C2E931F338BB4FC /* NSAttributedString+Sweeter.swift */; };
+		217BA78894E38E98AA02CD11E4BE2938 /* UIStackView+Sweeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB808E5E860B183973462A3EF076FA6 /* UIStackView+Sweeter.swift */; };
+		280D6F1E8CD1396446A8EB8716358537 /* TimeInterval+Sweeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F830CFBC8A3D15F4374F62994015277D /* TimeInterval+Sweeter.swift */; };
+		2A732F7128FF3F9448FA3BE4D18845AF /* UIViewController+Sweeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC91813FF9D8B3320E3892831EA4C13 /* UIViewController+Sweeter.swift */; };
+		3DCA312BF1369AE731ED43B4547A673E /* Codable+Sweeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF09FE6DF7185AF2151405D7E36AAC9 /* Codable+Sweeter.swift */; };
+		50E7BF009505CE63E80B37B9B7F1FF51 /* NSObject+Sweeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DFF2A51D94BA04C137B14AFC1A083A /* NSObject+Sweeter.swift */; };
+		51713F40BF1ACD5FFA1594BA6F4E822F /* Swift+Sweeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA6E03C4118CAD63DA43440461BE677 /* Swift+Sweeter.swift */; };
+		570DF4FFB8EC997BB5ABB0FE01BAC8CD /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 554E87EC5AFB88D6B6B259F7803C3584 /* PrivacyInfo.xcprivacy */; };
+		5975E6C7D76660CAD8B6D27CAFEAC262 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		92C6617207FB11C36CE0F8D36660281F /* Pods-VATTracker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 66BA7D1C6AC1DF33E73D9413D78A314B /* Pods-VATTracker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9350CF522B3BD7F6D5983AC2C1ABDB67 /* RadioGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B81ACCC05D4150C1F2D17585FEF74F1 /* RadioGroup.swift */; };
+		96943AF094F9BD56856D761CE5789766 /* SweeterSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D743318C266A034E432F8D26E4A6ED /* SweeterSwift-dummy.m */; };
+		9EAB8F0E5E04A84E2E06F5CC208CEF98 /* RadioGroup-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 68440BFD127B9AFC2F241629EEEC2F93 /* RadioGroup-dummy.m */; };
+		A7CBB0FE025A1CD1FDF0E9E7F904D092 /* UIApplication+Sweeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B79830A97B9734CA21CC69F679FDA /* UIApplication+Sweeter.swift */; };
+		AA66E7CED821DFAB64B2D8142182743F /* UIView+Sweeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188BB204F4CBFC4D50C3B59D06A8DBE7 /* UIView+Sweeter.swift */; };
+		B4830C30275A33D2878F8A9103C49CED /* Bundle+Sweeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F74690BC3D9C251CDEB42E4A14AD210 /* Bundle+Sweeter.swift */; };
+		BDCEF0D81223C39502A77DD8F5934808 /* RadioGroupPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E452EF741BD0046C3485D1DBBFC41F1D /* RadioGroupPicker.swift */; };
+		BDF040594F75C8290735F0BBA31DD719 /* UITextView+Sweeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA87BFD4D262F576EE7F3FAE7C824DA7 /* UITextView+Sweeter.swift */; };
+		C82405D47403475FB161D5199A8FECE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		C9CD071E48BAD25CA4FE5E8C3141413D /* RadioGroup-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C6685C269E7DDA553057EF717DA44529 /* RadioGroup-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC03733D52094FEAF0B68BAE7EB3D1AC /* SweeterSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A840D5DDB414A09332BF150AA3BC09DF /* SweeterSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0719A722710178037BE084384D8CFE0 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = F9C8427BE3C3259CFFBDC18AA5699004 /* PrivacyInfo.xcprivacy */; };
+		E821FC1F6C6B055D6DDE02E04E7798E0 /* NSManagedObjectContext+Sweeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9BA6946C892882F3AF26164879CDCF /* NSManagedObjectContext+Sweeter.swift */; };
+		E8A0A5AD5C8331FBDC8634855860AE6B /* DateFormatter+Sweeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBE7C7B54E39E612E564DBFD0BEC916 /* DateFormatter+Sweeter.swift */; };
+		EBD81864EB338944BA534F92C2254941 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D270FD481A2F649205B644CA0E7E9899 /* RadioButton.swift */; };
+		EEAC3BDC000B80BC3FCA400A7F239715 /* String+Sweeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4277D8D034D4FCF4065CAB0B2260584B /* String+Sweeter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5A945B03ADB19979E17CD9592D5C8FCB /* PBXContainerItemProxy */ = {
+		00465185D18AEACF7BB8138154D468B7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = E9F9401E9C74C0C393164FD8D86D0068;
-			remoteInfo = DropDown;
+			remoteGlobalIDString = 0140FFF6B6054D782B7D333CDD4E26D5;
+			remoteInfo = RadioGroup;
+		};
+		A8ECE0BEF87CB5775A14E9FA02B90A88 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6819F499159C87193DDD7D51504DD6C1;
+			remoteInfo = SweeterSwift;
+		};
+		B042590B5CD860E3ED8ED92791D1496B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6819F499159C87193DDD7D51504DD6C1;
+			remoteInfo = SweeterSwift;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0AF018CD89B79D17DAB0CE3510111144 /* RadioGroup */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RadioGroup; path = RadioGroup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AF09FE6DF7185AF2151405D7E36AAC9 /* Codable+Sweeter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Codable+Sweeter.swift"; path = "Source/Codable+Sweeter.swift"; sourceTree = "<group>"; };
+		0B81ACCC05D4150C1F2D17585FEF74F1 /* RadioGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadioGroup.swift; path = Sources/RadioGroup.swift; sourceTree = "<group>"; };
+		13A04783F0A24E1118B72B9E9D22F5D1 /* RadioGroup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RadioGroup.release.xcconfig; sourceTree = "<group>"; };
+		1537C33F73D68F0E03126F97B317DB5B /* SweeterSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SweeterSwift.release.xcconfig; sourceTree = "<group>"; };
+		188BB204F4CBFC4D50C3B59D06A8DBE7 /* UIView+Sweeter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Sweeter.swift"; path = "Source/UIView+Sweeter.swift"; sourceTree = "<group>"; };
 		18B832A920E17278D94433447463AE80 /* Pods-VATTracker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VATTracker-dummy.m"; sourceTree = "<group>"; };
-		2F8A529C653A26F8D0B57E1CD7B2B5E6 /* DropDown-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DropDown-Info.plist"; sourceTree = "<group>"; };
-		2FCC1AD54C344AFD4E184B9586BFE267 /* DropDown.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropDown.swift; path = DropDown/src/DropDown.swift; sourceTree = "<group>"; };
-		3761A77A038E79C8451C03293CDA4FC0 /* DPDConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DPDConstants.swift; path = DropDown/helpers/DPDConstants.swift; sourceTree = "<group>"; };
+		1F74690BC3D9C251CDEB42E4A14AD210 /* Bundle+Sweeter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bundle+Sweeter.swift"; path = "Source/Bundle+Sweeter.swift"; sourceTree = "<group>"; };
+		26219F64BFA1134CC9C9C32B9962ADDD /* RadioGroup-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RadioGroup-prefix.pch"; sourceTree = "<group>"; };
 		3D2D8BCCCF2451ACF8351B9175D989EB /* Pods-VATTracker-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VATTracker-acknowledgements.plist"; sourceTree = "<group>"; };
-		451F84589A96D52448FD74E261268404 /* DPDUIView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DPDUIView+Extension.swift"; path = "DropDown/helpers/DPDUIView+Extension.swift"; sourceTree = "<group>"; };
+		4277D8D034D4FCF4065CAB0B2260584B /* String+Sweeter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Sweeter.swift"; path = "Source/String+Sweeter.swift"; sourceTree = "<group>"; };
+		4AB808E5E860B183973462A3EF076FA6 /* UIStackView+Sweeter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIStackView+Sweeter.swift"; path = "Source/UIStackView+Sweeter.swift"; sourceTree = "<group>"; };
 		51FD16814530FFEFCA481F8D30BDB09F /* Pods-VATTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VATTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		554E87EC5AFB88D6B6B259F7803C3584 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		563AA536BF303BA355B7AEE04672CC55 /* Pods-VATTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VATTracker.release.xcconfig"; sourceTree = "<group>"; };
+		5FFB95AE3089F907564FDECD9CE9996D /* RadioGroup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RadioGroup.debug.xcconfig; sourceTree = "<group>"; };
+		624617538062F6520C2E931F338BB4FC /* NSAttributedString+Sweeter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSAttributedString+Sweeter.swift"; path = "Source/NSAttributedString+Sweeter.swift"; sourceTree = "<group>"; };
+		65E343D38E4A123FC15025CB8A2CA58A /* SweeterSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SweeterSwift-prefix.pch"; sourceTree = "<group>"; };
 		66BA7D1C6AC1DF33E73D9413D78A314B /* Pods-VATTracker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VATTracker-umbrella.h"; sourceTree = "<group>"; };
+		68440BFD127B9AFC2F241629EEEC2F93 /* RadioGroup-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RadioGroup-dummy.m"; sourceTree = "<group>"; };
 		71AB6607CC8C0757FD9CED1F334059C5 /* Pods-VATTracker-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VATTracker-frameworks.sh"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		730D85BE0320FD50EA665A82042E5742 /* DropDown-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DropDown-prefix.pch"; sourceTree = "<group>"; };
 		79C965AB94FE28EB692F93517389F5DB /* Pods-VATTracker-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VATTracker-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7A9BA6946C892882F3AF26164879CDCF /* NSManagedObjectContext+Sweeter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSManagedObjectContext+Sweeter.swift"; path = "Source/NSManagedObjectContext+Sweeter.swift"; sourceTree = "<group>"; };
+		85DFF2A51D94BA04C137B14AFC1A083A /* NSObject+Sweeter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSObject+Sweeter.swift"; path = "Source/NSObject+Sweeter.swift"; sourceTree = "<group>"; };
 		8CA181DB9525C89B03F7D10B779C88A2 /* Pods-VATTracker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-VATTracker.modulemap"; sourceTree = "<group>"; };
-		8DBB2377069976EC65992A59335066D3 /* DPDKeyboardListener.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DPDKeyboardListener.swift; path = DropDown/helpers/DPDKeyboardListener.swift; sourceTree = "<group>"; };
-		93EA092CDFBD4C66A29A9CDEA1DE78E1 /* DropDownCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropDownCell.swift; path = DropDown/src/DropDownCell.swift; sourceTree = "<group>"; };
-		9B6725B782188F18CB76A740433F14E4 /* DropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9C15EB8657063755722D9C7DC8D72885 /* DropDown.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DropDown.release.xcconfig; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A87586FE2C9DECB6AE7FCA3238E4A1B8 /* DropDown+Appearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DropDown+Appearance.swift"; path = "DropDown/src/DropDown+Appearance.swift"; sourceTree = "<group>"; };
-		AF17E1BF2597D8F37F69DB34CA024E5C /* DropDown-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DropDown-dummy.m"; sourceTree = "<group>"; };
+		8DC91813FF9D8B3320E3892831EA4C13 /* UIViewController+Sweeter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Sweeter.swift"; path = "Source/UIViewController+Sweeter.swift"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A840D5DDB414A09332BF150AA3BC09DF /* SweeterSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SweeterSwift-umbrella.h"; sourceTree = "<group>"; };
+		AA87BFD4D262F576EE7F3FAE7C824DA7 /* UITextView+Sweeter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextView+Sweeter.swift"; path = "Source/UITextView+Sweeter.swift"; sourceTree = "<group>"; };
+		AD24B3AAEA8F05C255C294989029C983 /* RadioGroup.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RadioGroup.modulemap; sourceTree = "<group>"; };
+		B76CD9F952582A6A4387D799501B3950 /* SweeterSwift */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SweeterSwift; path = SweeterSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB10CA8B0368EC29F82FB76738647C0B /* SweeterSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SweeterSwift.modulemap; sourceTree = "<group>"; };
+		BBA6E03C4118CAD63DA43440461BE677 /* Swift+Sweeter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Swift+Sweeter.swift"; path = "Source/Swift+Sweeter.swift"; sourceTree = "<group>"; };
+		C402E3B32FDE26618D75A16437C0FC3B /* RadioGroup-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "RadioGroup-Info.plist"; sourceTree = "<group>"; };
+		C6685C269E7DDA553057EF717DA44529 /* RadioGroup-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RadioGroup-umbrella.h"; sourceTree = "<group>"; };
 		C91CFA8ED96705188B980D214F273FD8 /* Pods-VATTracker */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-VATTracker"; path = Pods_VATTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DCD9DE78A7260CA1D999340CF0124D1D /* DropDown.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DropDown.modulemap; sourceTree = "<group>"; };
-		E5834E7BD925BD3ED29331C1938CC0B7 /* DropDown.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DropDown.debug.xcconfig; sourceTree = "<group>"; };
-		EEBC6D732E1B0C41C6A8D03A8C81CF47 /* DropDownCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = DropDownCell.xib; path = DropDown/resources/DropDownCell.xib; sourceTree = "<group>"; };
-		F8F61850F82D6CC477FAF8326336FD5A /* DropDown-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DropDown-umbrella.h"; sourceTree = "<group>"; };
+		CE8B79830A97B9734CA21CC69F679FDA /* UIApplication+Sweeter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIApplication+Sweeter.swift"; path = "Source/UIApplication+Sweeter.swift"; sourceTree = "<group>"; };
+		D270FD481A2F649205B644CA0E7E9899 /* RadioButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadioButton.swift; path = Sources/RadioButton.swift; sourceTree = "<group>"; };
+		D7D743318C266A034E432F8D26E4A6ED /* SweeterSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SweeterSwift-dummy.m"; sourceTree = "<group>"; };
+		E04E5CD6A14225033965709F4F2C2445 /* SweeterSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SweeterSwift.debug.xcconfig; sourceTree = "<group>"; };
+		E452EF741BD0046C3485D1DBBFC41F1D /* RadioGroupPicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadioGroupPicker.swift; path = Sources/RadioGroupPicker.swift; sourceTree = "<group>"; };
+		EF9C51758393CBB3DF9FDD0897D4B012 /* SweeterSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SweeterSwift-Info.plist"; sourceTree = "<group>"; };
+		F830CFBC8A3D15F4374F62994015277D /* TimeInterval+Sweeter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "TimeInterval+Sweeter.swift"; path = "Source/TimeInterval+Sweeter.swift"; sourceTree = "<group>"; };
 		F908E47D41649F8FE87736DA647C555F /* Pods-VATTracker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VATTracker-Info.plist"; sourceTree = "<group>"; };
+		F9C8427BE3C3259CFFBDC18AA5699004 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		FBBE7C7B54E39E612E564DBFD0BEC916 /* DateFormatter+Sweeter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DateFormatter+Sweeter.swift"; path = "Source/DateFormatter+Sweeter.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		808BE4E171BD75B6477EC2B77490C2B1 /* Frameworks */ = {
+		404E73F0661DE7E506071EEB9BD7B3C5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34D86F4481D9328BF45B637B906B3122 /* Foundation.framework in Frameworks */,
+				C82405D47403475FB161D5199A8FECE8 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8D4B70BBCCBBBFE06E006DD9C7404BAD /* Frameworks */ = {
+		6EF18C50A60E4A8EC04E37B8573393BF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82F11851AB4894BEF2EF6FDA89DDA367 /* Foundation.framework in Frameworks */,
+				5975E6C7D76660CAD8B6D27CAFEAC262 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE83A7DC31056139660DA785783F2220 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				079581155C43753422F46919E7908775 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		03D114B328A63C934E528549C2DCFE8D /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				DCD9DE78A7260CA1D999340CF0124D1D /* DropDown.modulemap */,
-				AF17E1BF2597D8F37F69DB34CA024E5C /* DropDown-dummy.m */,
-				2F8A529C653A26F8D0B57E1CD7B2B5E6 /* DropDown-Info.plist */,
-				730D85BE0320FD50EA665A82042E5742 /* DropDown-prefix.pch */,
-				F8F61850F82D6CC477FAF8326336FD5A /* DropDown-umbrella.h */,
-				E5834E7BD925BD3ED29331C1938CC0B7 /* DropDown.debug.xcconfig */,
-				9C15EB8657063755722D9C7DC8D72885 /* DropDown.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/DropDown";
-			sourceTree = "<group>";
-		};
-		057ED11B9D5977F85CBBBEF7C3E69DDB /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				1340602042F82FB2F98974EB1B0C2387 /* DropDown */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		1340602042F82FB2F98974EB1B0C2387 /* DropDown */ = {
-			isa = PBXGroup;
-			children = (
-				3761A77A038E79C8451C03293CDA4FC0 /* DPDConstants.swift */,
-				8DBB2377069976EC65992A59335066D3 /* DPDKeyboardListener.swift */,
-				451F84589A96D52448FD74E261268404 /* DPDUIView+Extension.swift */,
-				2FCC1AD54C344AFD4E184B9586BFE267 /* DropDown.swift */,
-				A87586FE2C9DECB6AE7FCA3238E4A1B8 /* DropDown+Appearance.swift */,
-				93EA092CDFBD4C66A29A9CDEA1DE78E1 /* DropDownCell.swift */,
-				C59647B6F3C67ED72D999C113D892AF0 /* Resources */,
-				03D114B328A63C934E528549C2DCFE8D /* Support Files */,
-			);
-			path = DropDown;
-			sourceTree = "<group>";
-		};
 		1CF926F32167484DC8AB4FE76A29D5D3 /* Pods-VATTracker */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,13 +156,19 @@
 			path = "Target Support Files/Pods-VATTracker";
 			sourceTree = "<group>";
 		};
-		484D91305243F6BD710B3FCE2BD8AECE /* Products */ = {
+		238E7283C7B25910912D31F511ADA14E /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				9B6725B782188F18CB76A740433F14E4 /* DropDown.framework */,
-				C91CFA8ED96705188B980D214F273FD8 /* Pods-VATTracker */,
+				AD24B3AAEA8F05C255C294989029C983 /* RadioGroup.modulemap */,
+				68440BFD127B9AFC2F241629EEEC2F93 /* RadioGroup-dummy.m */,
+				C402E3B32FDE26618D75A16437C0FC3B /* RadioGroup-Info.plist */,
+				26219F64BFA1134CC9C9C32B9962ADDD /* RadioGroup-prefix.pch */,
+				C6685C269E7DDA553057EF717DA44529 /* RadioGroup-umbrella.h */,
+				5FFB95AE3089F907564FDECD9CE9996D /* RadioGroup.debug.xcconfig */,
+				13A04783F0A24E1118B72B9E9D22F5D1 /* RadioGroup.release.xcconfig */,
 			);
-			name = Products;
+			name = "Support Files";
+			path = "../Target Support Files/RadioGroup";
 			sourceTree = "<group>";
 		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
@@ -154,6 +179,24 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		62D2EB3745F30262C8DB5F35FDDDEA12 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				554E87EC5AFB88D6B6B259F7803C3584 /* PrivacyInfo.xcprivacy */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		8FB46E09A2AC6C212E0B17919EE217FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C91CFA8ED96705188B980D214F273FD8 /* Pods-VATTracker */,
+				0AF018CD89B79D17DAB0CE3510111144 /* RadioGroup */,
+				B76CD9F952582A6A4387D799501B3950 /* SweeterSwift */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		AA097AB2B526B034ED7CB85979158E7A /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,12 +205,13 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		C59647B6F3C67ED72D999C113D892AF0 /* Resources */ = {
+		C079F1BF49292C5C28B66F2420189453 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				EEBC6D732E1B0C41C6A8D03A8C81CF47 /* DropDownCell.xib */,
+				EA140A4CC3F0178FBF963D4301B99D24 /* RadioGroup */,
+				E671EC0143241F747F645770B62EE797 /* SweeterSwift */,
 			);
-			name = Resources;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -175,8 +219,8 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				057ED11B9D5977F85CBBBEF7C3E69DDB /* Pods */,
-				484D91305243F6BD710B3FCE2BD8AECE /* Products */,
+				C079F1BF49292C5C28B66F2420189453 /* Pods */,
+				8FB46E09A2AC6C212E0B17919EE217FB /* Products */,
 				AA097AB2B526B034ED7CB85979158E7A /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -189,63 +233,151 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E671EC0143241F747F645770B62EE797 /* SweeterSwift */ = {
+			isa = PBXGroup;
+			children = (
+				1F74690BC3D9C251CDEB42E4A14AD210 /* Bundle+Sweeter.swift */,
+				0AF09FE6DF7185AF2151405D7E36AAC9 /* Codable+Sweeter.swift */,
+				FBBE7C7B54E39E612E564DBFD0BEC916 /* DateFormatter+Sweeter.swift */,
+				624617538062F6520C2E931F338BB4FC /* NSAttributedString+Sweeter.swift */,
+				7A9BA6946C892882F3AF26164879CDCF /* NSManagedObjectContext+Sweeter.swift */,
+				85DFF2A51D94BA04C137B14AFC1A083A /* NSObject+Sweeter.swift */,
+				4277D8D034D4FCF4065CAB0B2260584B /* String+Sweeter.swift */,
+				BBA6E03C4118CAD63DA43440461BE677 /* Swift+Sweeter.swift */,
+				F830CFBC8A3D15F4374F62994015277D /* TimeInterval+Sweeter.swift */,
+				CE8B79830A97B9734CA21CC69F679FDA /* UIApplication+Sweeter.swift */,
+				4AB808E5E860B183973462A3EF076FA6 /* UIStackView+Sweeter.swift */,
+				AA87BFD4D262F576EE7F3FAE7C824DA7 /* UITextView+Sweeter.swift */,
+				188BB204F4CBFC4D50C3B59D06A8DBE7 /* UIView+Sweeter.swift */,
+				8DC91813FF9D8B3320E3892831EA4C13 /* UIViewController+Sweeter.swift */,
+				62D2EB3745F30262C8DB5F35FDDDEA12 /* Resources */,
+				F2CF3F55D9AE7301F213F5AD22EA4CC6 /* Support Files */,
+			);
+			name = SweeterSwift;
+			path = SweeterSwift;
+			sourceTree = "<group>";
+		};
+		EA140A4CC3F0178FBF963D4301B99D24 /* RadioGroup */ = {
+			isa = PBXGroup;
+			children = (
+				D270FD481A2F649205B644CA0E7E9899 /* RadioButton.swift */,
+				0B81ACCC05D4150C1F2D17585FEF74F1 /* RadioGroup.swift */,
+				E452EF741BD0046C3485D1DBBFC41F1D /* RadioGroupPicker.swift */,
+				FEDCCEEC45E4FAF525C1373B2DFBCACC /* Resources */,
+				238E7283C7B25910912D31F511ADA14E /* Support Files */,
+			);
+			name = RadioGroup;
+			path = RadioGroup;
+			sourceTree = "<group>";
+		};
+		F2CF3F55D9AE7301F213F5AD22EA4CC6 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BB10CA8B0368EC29F82FB76738647C0B /* SweeterSwift.modulemap */,
+				D7D743318C266A034E432F8D26E4A6ED /* SweeterSwift-dummy.m */,
+				EF9C51758393CBB3DF9FDD0897D4B012 /* SweeterSwift-Info.plist */,
+				65E343D38E4A123FC15025CB8A2CA58A /* SweeterSwift-prefix.pch */,
+				A840D5DDB414A09332BF150AA3BC09DF /* SweeterSwift-umbrella.h */,
+				E04E5CD6A14225033965709F4F2C2445 /* SweeterSwift.debug.xcconfig */,
+				1537C33F73D68F0E03126F97B317DB5B /* SweeterSwift.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SweeterSwift";
+			sourceTree = "<group>";
+		};
+		FEDCCEEC45E4FAF525C1373B2DFBCACC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F9C8427BE3C3259CFFBDC18AA5699004 /* PrivacyInfo.xcprivacy */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		97CE91431E229797751455423C79CA4F /* Headers */ = {
+		88BE87B5DFD15FD8D8CF5ACA69674B47 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0A8C46EEE733B55971B1CC5ED65C9AA /* DropDown-umbrella.h in Headers */,
+				92C6617207FB11C36CE0F8D36660281F /* Pods-VATTracker-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E935DEC3348B406C94ACF99704FEC07B /* Headers */ = {
+		8D8220EEBE713B522FD3259A73314EC0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43CD4B26F3F41CC43145896C6D3E3E88 /* Pods-VATTracker-umbrella.h in Headers */,
+				CC03733D52094FEAF0B68BAE7EB3D1AC /* SweeterSwift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A45AC7804F09A56CB715CF233FD2BA82 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9CD071E48BAD25CA4FE5E8C3141413D /* RadioGroup-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1988F978804C8F4FDE3724E008188713 /* Pods-VATTracker */ = {
+		0140FFF6B6054D782B7D333CDD4E26D5 /* RadioGroup */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3D661FDF2F227500294BE68A2CB98413 /* Build configuration list for PBXNativeTarget "Pods-VATTracker" */;
+			buildConfigurationList = 33CA19DDC78F2E887258092AD1817DF7 /* Build configuration list for PBXNativeTarget "RadioGroup" */;
 			buildPhases = (
-				E935DEC3348B406C94ACF99704FEC07B /* Headers */,
-				C57D95008AA13A95D3F82F62C6D1DDCA /* Sources */,
-				8D4B70BBCCBBBFE06E006DD9C7404BAD /* Frameworks */,
-				FFC30541A8F6B57234F6F88321276910 /* Resources */,
+				A45AC7804F09A56CB715CF233FD2BA82 /* Headers */,
+				F649404268541185CB79A05F7094D2C0 /* Sources */,
+				6EF18C50A60E4A8EC04E37B8573393BF /* Frameworks */,
+				70351D539F688F337E80F53A4BFC465C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				76DAEDC64179BBFA1F69A5837B683DCA /* PBXTargetDependency */,
+				E953133E42E2A3281E4AAB19D1995E32 /* PBXTargetDependency */,
+			);
+			name = RadioGroup;
+			productName = RadioGroup;
+			productReference = 0AF018CD89B79D17DAB0CE3510111144 /* RadioGroup */;
+			productType = "com.apple.product-type.framework";
+		};
+		1988F978804C8F4FDE3724E008188713 /* Pods-VATTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A69D73CA39F2DC38A5DFF2689FDFD359 /* Build configuration list for PBXNativeTarget "Pods-VATTracker" */;
+			buildPhases = (
+				88BE87B5DFD15FD8D8CF5ACA69674B47 /* Headers */,
+				0838F12F7FF3FE35DBA22EB997985387 /* Sources */,
+				AE83A7DC31056139660DA785783F2220 /* Frameworks */,
+				E0527AF0D0E22C826B74AFEFE8758D56 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9851766478F5527C8A9231B9F2ED9BB6 /* PBXTargetDependency */,
+				71E96A19865A6A0886AB2623A4009CD6 /* PBXTargetDependency */,
 			);
 			name = "Pods-VATTracker";
 			productName = Pods_VATTracker;
 			productReference = C91CFA8ED96705188B980D214F273FD8 /* Pods-VATTracker */;
 			productType = "com.apple.product-type.framework";
 		};
-		E9F9401E9C74C0C393164FD8D86D0068 /* DropDown */ = {
+		6819F499159C87193DDD7D51504DD6C1 /* SweeterSwift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 53052E6CBA1E65D6EF818199E617AC68 /* Build configuration list for PBXNativeTarget "DropDown" */;
+			buildConfigurationList = 94D35A57F33F11A178B2EF39EC719115 /* Build configuration list for PBXNativeTarget "SweeterSwift" */;
 			buildPhases = (
-				97CE91431E229797751455423C79CA4F /* Headers */,
-				48864C435B3DB37698CF568C638CF98F /* Sources */,
-				808BE4E171BD75B6477EC2B77490C2B1 /* Frameworks */,
-				EFDE5B37A62BFF2F9A9BD2023B960CD7 /* Resources */,
+				8D8220EEBE713B522FD3259A73314EC0 /* Headers */,
+				98903CBBE6DE89031B198E9879D4B3E0 /* Sources */,
+				404E73F0661DE7E506071EEB9BD7B3C5 /* Frameworks */,
+				56917171F20997765E5071FCA6470664 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = DropDown;
-			productName = DropDown;
-			productReference = 9B6725B782188F18CB76A740433F14E4 /* DropDown.framework */;
+			name = SweeterSwift;
+			productName = SweeterSwift;
+			productReference = B76CD9F952582A6A4387D799501B3950 /* SweeterSwift */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -266,26 +398,35 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 484D91305243F6BD710B3FCE2BD8AECE /* Products */;
+			productRefGroup = 8FB46E09A2AC6C212E0B17919EE217FB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E9F9401E9C74C0C393164FD8D86D0068 /* DropDown */,
 				1988F978804C8F4FDE3724E008188713 /* Pods-VATTracker */,
+				0140FFF6B6054D782B7D333CDD4E26D5 /* RadioGroup */,
+				6819F499159C87193DDD7D51504DD6C1 /* SweeterSwift */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		EFDE5B37A62BFF2F9A9BD2023B960CD7 /* Resources */ = {
+		56917171F20997765E5071FCA6470664 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68E1653C561E14BBEAC9CF4873570D58 /* DropDownCell.xib in Resources */,
+				570DF4FFB8EC997BB5ABB0FE01BAC8CD /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FFC30541A8F6B57234F6F88321276910 /* Resources */ = {
+		70351D539F688F337E80F53A4BFC465C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0719A722710178037BE084384D8CFE0 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0527AF0D0E22C826B74AFEFE8758D56 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -295,45 +436,75 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		48864C435B3DB37698CF568C638CF98F /* Sources */ = {
+		0838F12F7FF3FE35DBA22EB997985387 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74012B832FAF67F8D62A2B27CDAFE8B5 /* DPDConstants.swift in Sources */,
-				89A72A55273CE358DC4E7600F785C37B /* DPDKeyboardListener.swift in Sources */,
-				B73E510E851686F8184E26986A470458 /* DPDUIView+Extension.swift in Sources */,
-				84459C4824533C9C4FD12AFC941F3CE1 /* DropDown.swift in Sources */,
-				515E22E4255B6073C1897BDDB091A2B8 /* DropDown+Appearance.swift in Sources */,
-				907338727C09F65DB75AA7AB9E10C3B4 /* DropDown-dummy.m in Sources */,
-				BDC10974A8641F01C5665C61EA37A153 /* DropDownCell.swift in Sources */,
+				018B0BE343666DCDB4B4659AD6485E45 /* Pods-VATTracker-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C57D95008AA13A95D3F82F62C6D1DDCA /* Sources */ = {
+		98903CBBE6DE89031B198E9879D4B3E0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				655847ADA4324F2B2061DF1942897869 /* Pods-VATTracker-dummy.m in Sources */,
+				B4830C30275A33D2878F8A9103C49CED /* Bundle+Sweeter.swift in Sources */,
+				3DCA312BF1369AE731ED43B4547A673E /* Codable+Sweeter.swift in Sources */,
+				E8A0A5AD5C8331FBDC8634855860AE6B /* DateFormatter+Sweeter.swift in Sources */,
+				17A1BA4CFBC241254CCB321B04E25A46 /* NSAttributedString+Sweeter.swift in Sources */,
+				E821FC1F6C6B055D6DDE02E04E7798E0 /* NSManagedObjectContext+Sweeter.swift in Sources */,
+				50E7BF009505CE63E80B37B9B7F1FF51 /* NSObject+Sweeter.swift in Sources */,
+				EEAC3BDC000B80BC3FCA400A7F239715 /* String+Sweeter.swift in Sources */,
+				96943AF094F9BD56856D761CE5789766 /* SweeterSwift-dummy.m in Sources */,
+				51713F40BF1ACD5FFA1594BA6F4E822F /* Swift+Sweeter.swift in Sources */,
+				280D6F1E8CD1396446A8EB8716358537 /* TimeInterval+Sweeter.swift in Sources */,
+				A7CBB0FE025A1CD1FDF0E9E7F904D092 /* UIApplication+Sweeter.swift in Sources */,
+				217BA78894E38E98AA02CD11E4BE2938 /* UIStackView+Sweeter.swift in Sources */,
+				BDF040594F75C8290735F0BBA31DD719 /* UITextView+Sweeter.swift in Sources */,
+				AA66E7CED821DFAB64B2D8142182743F /* UIView+Sweeter.swift in Sources */,
+				2A732F7128FF3F9448FA3BE4D18845AF /* UIViewController+Sweeter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F649404268541185CB79A05F7094D2C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBD81864EB338944BA534F92C2254941 /* RadioButton.swift in Sources */,
+				9350CF522B3BD7F6D5983AC2C1ABDB67 /* RadioGroup.swift in Sources */,
+				9EAB8F0E5E04A84E2E06F5CC208CEF98 /* RadioGroup-dummy.m in Sources */,
+				BDCEF0D81223C39502A77DD8F5934808 /* RadioGroupPicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		76DAEDC64179BBFA1F69A5837B683DCA /* PBXTargetDependency */ = {
+		71E96A19865A6A0886AB2623A4009CD6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = DropDown;
-			target = E9F9401E9C74C0C393164FD8D86D0068 /* DropDown */;
-			targetProxy = 5A945B03ADB19979E17CD9592D5C8FCB /* PBXContainerItemProxy */;
+			name = SweeterSwift;
+			target = 6819F499159C87193DDD7D51504DD6C1 /* SweeterSwift */;
+			targetProxy = B042590B5CD860E3ED8ED92791D1496B /* PBXContainerItemProxy */;
+		};
+		9851766478F5527C8A9231B9F2ED9BB6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RadioGroup;
+			target = 0140FFF6B6054D782B7D333CDD4E26D5 /* RadioGroup */;
+			targetProxy = 00465185D18AEACF7BB8138154D468B7 /* PBXContainerItemProxy */;
+		};
+		E953133E42E2A3281E4AAB19D1995E32 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SweeterSwift;
+			target = 6819F499159C87193DDD7D51504DD6C1 /* SweeterSwift */;
+			targetProxy = A8ECE0BEF87CB5775A14E9FA02B90A88 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		3C1052816C2B3736BCC4B0DA3753E779 /* Release */ = {
+		53E7906EE3552B7F78ADD911AF87D5C9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 563AA536BF303BA355B7AEE04672CC55 /* Pods-VATTracker.release.xcconfig */;
+			baseConfigurationReference = 13A04783F0A24E1118B72B9E9D22F5D1 /* RadioGroup.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -343,23 +514,17 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-VATTracker/Pods-VATTracker-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/RadioGroup/RadioGroup-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RadioGroup/RadioGroup-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-VATTracker/Pods-VATTracker.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MODULEMAP_FILE = "Target Support Files/RadioGroup/RadioGroup.modulemap";
+				PRODUCT_MODULE_NAME = RadioGroup;
+				PRODUCT_NAME = RadioGroup;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -367,7 +532,7 @@
 			};
 			name = Release;
 		};
-		4243D54044EE4470DEF532485A88CF70 /* Debug */ = {
+		836C94496A40AED72A86B45989256296 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 51FD16814530FFEFCA481F8D30BDB09F /* Pods-VATTracker.debug.xcconfig */;
 			buildSettings = {
@@ -398,6 +563,40 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		855EF9C299702AA8EDBE5154FE93E0AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E04E5CD6A14225033965709F4F2C2445 /* SweeterSwift.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SweeterSwift/SweeterSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SweeterSwift/SweeterSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SweeterSwift/SweeterSwift.modulemap";
+				PRODUCT_MODULE_NAME = SweeterSwift;
+				PRODUCT_NAME = SweeterSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -470,6 +669,36 @@
 			};
 			name = Debug;
 		};
+		906FB63A69DBF3D161D17764225F960A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FFB95AE3089F907564FDECD9CE9996D /* RadioGroup.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/RadioGroup/RadioGroup-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RadioGroup/RadioGroup-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MODULEMAP_FILE = "Target Support Files/RadioGroup/RadioGroup.modulemap";
+				PRODUCT_MODULE_NAME = RadioGroup;
+				PRODUCT_NAME = RadioGroup;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		9E406C6AAF85E580207CD97B0044DEAB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -532,9 +761,47 @@
 			};
 			name = Release;
 		};
-		C24518E891FAA59668669823639498EB /* Release */ = {
+		C1B701715C8C3AA3E0D8E6B608957A33 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9C15EB8657063755722D9C7DC8D72885 /* DropDown.release.xcconfig */;
+			baseConfigurationReference = 563AA536BF303BA355B7AEE04672CC55 /* Pods-VATTracker.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-VATTracker/Pods-VATTracker-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-VATTracker/Pods-VATTracker.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D60720EB7EEAE6A761B739AEAB7ED01F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1537C33F73D68F0E03126F97B317DB5B /* SweeterSwift.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -544,18 +811,18 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/DropDown/DropDown-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/DropDown/DropDown-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SweeterSwift/SweeterSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SweeterSwift/SweeterSwift-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "Target Support Files/DropDown/DropDown.modulemap";
-				PRODUCT_MODULE_NAME = DropDown;
-				PRODUCT_NAME = DropDown;
+				MODULEMAP_FILE = "Target Support Files/SweeterSwift/SweeterSwift.modulemap";
+				PRODUCT_MODULE_NAME = SweeterSwift;
+				PRODUCT_NAME = SweeterSwift;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -567,48 +834,14 @@
 			};
 			name = Release;
 		};
-		E2CDE7BD114C532701D2E79C5CB4CAA8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E5834E7BD925BD3ED29331C1938CC0B7 /* DropDown.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/DropDown/DropDown-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/DropDown/DropDown-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/DropDown/DropDown.modulemap";
-				PRODUCT_MODULE_NAME = DropDown;
-				PRODUCT_NAME = DropDown;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3D661FDF2F227500294BE68A2CB98413 /* Build configuration list for PBXNativeTarget "Pods-VATTracker" */ = {
+		33CA19DDC78F2E887258092AD1817DF7 /* Build configuration list for PBXNativeTarget "RadioGroup" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4243D54044EE4470DEF532485A88CF70 /* Debug */,
-				3C1052816C2B3736BCC4B0DA3753E779 /* Release */,
+				906FB63A69DBF3D161D17764225F960A /* Debug */,
+				53E7906EE3552B7F78ADD911AF87D5C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -622,11 +855,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		53052E6CBA1E65D6EF818199E617AC68 /* Build configuration list for PBXNativeTarget "DropDown" */ = {
+		94D35A57F33F11A178B2EF39EC719115 /* Build configuration list for PBXNativeTarget "SweeterSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E2CDE7BD114C532701D2E79C5CB4CAA8 /* Debug */,
-				C24518E891FAA59668669823639498EB /* Release */,
+				855EF9C299702AA8EDBE5154FE93E0AC /* Debug */,
+				D60720EB7EEAE6A761B739AEAB7ED01F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A69D73CA39F2DC38A5DFF2689FDFD359 /* Build configuration list for PBXNativeTarget "Pods-VATTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				836C94496A40AED72A86B45989256296 /* Debug */,
+				C1B701715C8C3AA3E0D8E6B608957A33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
