@@ -62,12 +62,15 @@ class InvoiceListVC: UIViewController {
     
     private func configureUI() {
         view.backgroundColor = .systemBackground
+        navigationController?.navigationBar.standardAppearance = SetNavBarAppearance.setupNavBar(with: self.navigationController!)
+        navigationController?.navigationBar.scrollEdgeAppearance = SetNavBarAppearance.setupNavBar(with: self.navigationController!)
 
         view.addSubview(tableView)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(searchBar)
         searchBar.translatesAutoresizingMaskIntoConstraints = false
         
+        searchBar.placeholder = "Search for invoice issuer"
         let padding: CGFloat = 5
         
         NSLayoutConstraint.activate([

@@ -7,7 +7,7 @@
 
 import UIKit
 import CoreData
-
+import IQKeyboardManager
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -28,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UITabBar.appearance().standardAppearance = tabAppearance
         }
         
+        IQKeyboardManager.shared().isEnabled = true
         
         return true
     }

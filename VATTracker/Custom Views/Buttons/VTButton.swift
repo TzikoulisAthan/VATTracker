@@ -20,10 +20,12 @@ class VTButton: UIButton {
     }
     
     
-    init(buttonTitle: String, color: UIColor) {
-        super.init(frame: .zero)
+    convenience init(buttonTitle: String, color: UIColor, type: UIButton.ButtonType = .system) {
+        //super.init(frame: .zero)
+        self.init(type: type)
         self.setTitle(buttonTitle, for: .normal)
         self.backgroundColor = color
+        self.buttonType
         configure()
     }
     
@@ -34,6 +36,7 @@ class VTButton: UIButton {
         layer.cornerRadius = 10
         setTitleColor(.white, for: .normal)
         titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline)
+        
     }
     
 }

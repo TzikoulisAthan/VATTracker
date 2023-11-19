@@ -1,20 +1,24 @@
 PODS:
+  - IQKeyboardManager (6.5.16)
   - RadioGroup (1.4.6):
     - SweeterSwift
   - SweeterSwift (1.2.3)
 
 DEPENDENCIES:
+  - IQKeyboardManager
   - RadioGroup
 
 SPEC REPOS:
   trunk:
+    - IQKeyboardManager
     - RadioGroup
     - SweeterSwift
 
 SPEC CHECKSUMS:
+  IQKeyboardManager: 024b54d7dcb765c5bc99882cb4d5ea24a8cb7c3c
   RadioGroup: 5dbb3cc52b512b7acce45833c9aecf156d22d2db
   SweeterSwift: 3910bab8ba35b6964d5169a3c52b2c87d930b61c
 
-PODFILE CHECKSUM: 6738eeacfb9c58f2e11d49af0740edf14214afa0
+PODFILE CHECKSUM: 71588aec4bee1036f5621eaf3ffab4595add39a0
 
 COCOAPODS: 1.12.0

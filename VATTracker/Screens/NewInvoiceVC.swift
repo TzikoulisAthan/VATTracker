@@ -10,12 +10,13 @@ import CoreData
 import RadioGroup
 
 class NewInvoiceVC: UIViewController {
-  
+    
     //MARK: - Variables
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     var invoices = [Invoice]()
     var loadedInvoices = [Invoice]()
+    let navAppearance = SetNavBarAppearance()
     
     //MARK: - UI Components
     let datePickerLaber = VTLabel(labelTitle: "Issue Date:")
@@ -46,7 +47,7 @@ class NewInvoiceVC: UIViewController {
     
     
     let radioGroup: RadioGroup = {
-       let radiogroup = RadioGroup(titles: ["Expense", "Income"])
+        let radiogroup = RadioGroup(titles: ["Expense", "Income"])
         radiogroup.isVertical = false
         radiogroup.tintColor = .black
         radiogroup.selectedIndex = 0
@@ -59,6 +60,8 @@ class NewInvoiceVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        addDoneToNumPadTextFields()
+    
         setupUI()
         createDismissKeyboardTapGesture()
         
@@ -85,7 +88,7 @@ class NewInvoiceVC: UIViewController {
             print("Fill invoicenumber textfield!")
             return
         }
-
+        
         
         guard totalAmountTextField.text?.isEmpty == false else {
             print("Fill totalamount textfield!")
@@ -156,12 +159,24 @@ class NewInvoiceVC: UIViewController {
     }
     
     
-   
+    private func addDoneToNumPadTextFields() {
+        invoiceNumberTextField.delegate = self
+        vatAmountTextField.delegate = self
+        totalAmountTextField.delegate = self
+        
+        invoiceNumberTextField.addDoneButtonToKeyboard(myAction:  #selector(self.invoiceNumberTextField.resignFirstResponder))
+        vatAmountTextField.addDoneButtonToKeyboard(myAction:  #selector(self.vatAmountTextField.resignFirstResponder))
+        totalAmountTextField.addDoneButtonToKeyboard(myAction:  #selector(self.totalAmountTextField.resignFirstResponder))
+    }
     
     
     //MARK: - UI Methods
+
+    
     private func setupUI() {
         view.backgroundColor = .systemBackground
+        navigationController?.navigationBar.standardAppearance = SetNavBarAppearance.setupNavBar(with: self.navigationController!)
+        navigationController?.navigationBar.scrollEdgeAppearance = SetNavBarAppearance.setupNavBar(with: self.navigationController!)
         
         let views = [invoiceIssuerLabel, invoiceNumberLabel, totalAmountLabel, vatAmountLabel, invoiceIssuerTextField, invoiceNumberTextField,
                      totalAmountTextField, vatAmountTextField, saveButton, cancelButton, datePicker, datePickerLaber, radioGroup
@@ -174,10 +189,10 @@ class NewInvoiceVC: UIViewController {
         datePicker.translatesAutoresizingMaskIntoConstraints = false
         radioGroup.translatesAutoresizingMaskIntoConstraints = false
         
-        let padding: CGFloat = 15
+        let padding: CGFloat = 10
         let groupPadding: CGFloat = 2
         
-        
+
         saveButton.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
         cancelButton.addTarget(self, action: #selector(cancelButtonTapped), for: .touchUpInside)
         
@@ -232,20 +247,19 @@ class NewInvoiceVC: UIViewController {
             vatAmountTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
             vatAmountTextField.heightAnchor.constraint(equalToConstant: 40),
             
-            
-            radioGroup.topAnchor.constraint(equalTo: vatAmountTextField.bottomAnchor, constant: padding),
+            radioGroup.topAnchor.constraint(equalTo: vatAmountTextField.bottomAnchor, constant: padding+10),
             radioGroup.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            radioGroup.heightAnchor.constraint(equalToConstant: 25),
+            radioGroup.heightAnchor.constraint(equalToConstant: 30),
             
-            saveButton.topAnchor.constraint(equalTo: radioGroup.bottomAnchor, constant: 25),
+            saveButton.topAnchor.constraint(equalTo: radioGroup.bottomAnchor, constant: 10),
             saveButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             saveButton.widthAnchor.constraint(equalToConstant: 140),
-            saveButton.heightAnchor.constraint(equalToConstant: 70),
+            saveButton.heightAnchor.constraint(equalToConstant: 50),
             
             cancelButton.topAnchor.constraint(equalTo: saveButton.bottomAnchor, constant: 10),
             cancelButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             cancelButton.widthAnchor.constraint(equalToConstant: 140),
-            cancelButton.heightAnchor.constraint(equalToConstant: 50),
+            cancelButton.heightAnchor.constraint(equalToConstant: 35),
         ])
     }
     
@@ -253,8 +267,10 @@ class NewInvoiceVC: UIViewController {
 
 
 //MARK: - TextField delegate methods
-//extension NewInvoiceVC: UITextFieldDelegate {
-//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-//        <#code#>
-//    }
-//}
+extension NewInvoiceVC: UITextFieldDelegate {
+    
+    
+    //    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    //
+    //    }
+}

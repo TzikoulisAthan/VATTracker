@@ -7,4 +7,5 @@ target 'VATTracker' do
 
   # Pods for VATTracker
 pod 'RadioGroup'
+pod 'IQKeyboardManager'
 end
