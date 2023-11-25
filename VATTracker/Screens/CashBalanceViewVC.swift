@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OverviewTitleVC: UIViewController {
+class CashBalanceViewVC: UIViewController {
 
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
