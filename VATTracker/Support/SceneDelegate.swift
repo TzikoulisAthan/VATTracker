@@ -52,7 +52,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func createTabbar() -> UITabBarController {
         let tabbar = CustomTabbarController()
-        UITabBar.appearance().tintColor = .systemGreen
+        UITabBar.appearance().tintColor = UIColor(displayP3Red: 0, green: 0.498, blue: 0.8588, alpha: 1.0)
         tabbar.viewControllers = [createMainNC(), createNewInvoiceVC(), createInvoiceListVC()]
       
         

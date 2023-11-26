@@ -113,8 +113,8 @@ extension InvoiceListVC: UITableViewDelegate, UITableViewDataSource {
         } else {
             cell.invoiceIssuerLabelText.text = invoiceList[indexPath.row].issuer
             cell.invoiceNumberLabelText.text = invoiceList[indexPath.row].number
-            cell.totalAmountLabelText.text = invoiceList[indexPath.row].totalAmount
-            cell.vatAmountLabelText.text = invoiceList[indexPath.row].vatAmount
+            cell.totalAmountLabelText.text = "(\(invoiceList[indexPath.row].totalAmount!))"
+            cell.vatAmountLabelText.text = "(\(invoiceList[indexPath.row].vatAmount!))"
             cell.totalAmountLabelText.textColor = .red
             cell.vatAmountLabelText.textColor = .red
         }
@@ -137,6 +137,11 @@ extension InvoiceListVC: UITableViewDelegate, UITableViewDataSource {
             
             tableView.endUpdates()
         }
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
