@@ -49,7 +49,7 @@ class VatBalanceViewVC: UIViewController {
         button.setTitleColor(.red, for: .normal)
         button.titleLabel?.adjustsFontSizeToFitWidth = true
         button.titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline)
-        button.addTarget(VatBalanceViewVC.self, action: #selector(payVatButtonPressed), for: .touchUpInside)
+        button.addTarget(self, action: #selector(payVatButtonPressed), for: .touchUpInside)
         return button
     }()
     
@@ -58,7 +58,7 @@ class VatBalanceViewVC: UIViewController {
         button.setTitleColor(.red, for: .normal)
         button.titleLabel?.adjustsFontSizeToFitWidth = true
         button.titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline)
-        button.addTarget(VatBalanceViewVC.self, action: #selector(receiveVatButtonPressed), for: .touchUpInside)
+        button.addTarget(self, action: #selector(receiveVatButtonPressed), for: .touchUpInside)
         return button
     }()
     
@@ -108,6 +108,8 @@ class VatBalanceViewVC: UIViewController {
             let alertAction = UIAlertAction(title: "Pay", style: .default) { action in
                 DispatchQueue.main.async {
                     let alert = VTAlertVC(alertTitle: "Make VAT payment")
+                    alert.isPayment = true
+                    alert.vatAmountTextField.text = String(currentVatAmount)
                     alert.modalPresentationStyle = .overFullScreen
                     alert.modalTransitionStyle = .crossDissolve
                     self.present(alert, animated: true)
@@ -142,6 +144,8 @@ class VatBalanceViewVC: UIViewController {
             let alertAction = UIAlertAction(title: "Receive", style: .default) { action in
                 DispatchQueue.main.async {
                     let alert = VTAlertVC(alertTitle: "Receive VAT payment")
+                    alert.isPayment = false
+                    alert.vatAmountTextField.text = String(currentVatAmount)
                     alert.modalPresentationStyle = .overFullScreen
                     alert.modalTransitionStyle = .crossDissolve
                     self.present(alert, animated: true)

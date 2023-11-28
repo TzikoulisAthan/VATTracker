@@ -7,4 +7,9 @@
         <attribute name="totalAmount" attributeType="String"/>
         <attribute name="vatAmount" attributeType="String"/>
     </entity>
+    <entity name="Payments" representedClassName="Payments" syncable="YES" codeGenerationType="class">
+        <attribute name="amount" optional="YES" attributeType="String"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="explanation" optional="YES" attributeType="String"/>
+    </entity>
 </model>

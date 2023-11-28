@@ -9,6 +9,11 @@ import UIKit
 
 class VTAlertVC: UIViewController {
     
+    //MARK: - Variables
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
+    var isPayment: Bool?
+    
     //MARK: - UI Components
     let containerView = UIView()
     
@@ -35,6 +40,8 @@ class VTAlertVC: UIViewController {
         textField.textAlignment = .left
         textField.layer.borderWidth = 1
         textField.layer.borderColor = UIColor.gray.cgColor
+        textField.backgroundColor = .lightGray
+        textField.isEnabled = false
         return textField
     }()
     
@@ -114,7 +121,43 @@ class VTAlertVC: UIViewController {
     
     //MARK: - Selectors
     @objc func saveButtonTapped() {
-        dismiss(animated: true)
+        let newPayment = Payments(context: context)
+        
+        guard let description = descriptionTextField.text else { return }
+        
+        
+        if isPayment! {
+            // textfield = positive -> negative amount
+            newPayment.date = Date()
+            newPayment.explanation = description
+            newPayment.amount = "-\(vatAmountTextField.text!)"
+          
+            savePayment()
+            
+        } else {
+            // textfield = negative -> positive amount
+            let amount = abs(Double(vatAmountTextField.text!)!)
+            
+            newPayment.date = Date()
+            newPayment.explanation = description
+            newPayment.amount = String(amount)
+            
+            savePayment()
+        }
+        
+        
+    }
+    
+    
+    //MARK: - Functions
+    
+    private func savePayment() {
+        do {
+            try context.save()
+            dismiss(animated: true)
+        } catch {
+            print("Error saving invoice: \(error)")
+        }
     }
     
  
