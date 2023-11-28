@@ -10,8 +10,6 @@ import UIKit
 class CashBalanceViewVC: UIViewController {
     
     //MARK: - Variables
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
     var invoiceList = [Invoice]()
     
     //MARK: - UI Components

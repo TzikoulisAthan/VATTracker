@@ -24,6 +24,7 @@
 		1371695B2B08B9000003D992 /* SetNavBarAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1371695A2B08B9000003D992 /* SetNavBarAppearance.swift */; };
 		1371695D2B0E81A70003D992 /* DataFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1371695C2B0E81A70003D992 /* DataFunctions.swift */; };
 		1371695F2B112DD20003D992 /* VatBalanceViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1371695E2B112DD20003D992 /* VatBalanceViewVC.swift */; };
+		137169622B150F220003D992 /* VTAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137169612B150F220003D992 /* VTAlertVC.swift */; };
 		13AFA3B62B03C30D000D5D51 /* DateToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AFA3B52B03C30D000D5D51 /* DateToString.swift */; };
 		13AFA3B92B03ECA3000D5D51 /* TextField+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AFA3B82B03ECA3000D5D51 /* TextField+Ext.swift */; };
 		13EEA67929E30FFE00A9C0FC /* CashBalanceViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EEA67829E30FFE00A9C0FC /* CashBalanceViewVC.swift */; };
@@ -51,6 +52,7 @@
 		1371695A2B08B9000003D992 /* SetNavBarAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetNavBarAppearance.swift; sourceTree = "<group>"; };
 		1371695C2B0E81A70003D992 /* DataFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFunctions.swift; sourceTree = "<group>"; };
 		1371695E2B112DD20003D992 /* VatBalanceViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VatBalanceViewVC.swift; sourceTree = "<group>"; };
+		137169612B150F220003D992 /* VTAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VTAlertVC.swift; sourceTree = "<group>"; };
 		13AFA3B52B03C30D000D5D51 /* DateToString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateToString.swift; sourceTree = "<group>"; };
 		13AFA3B82B03ECA3000D5D51 /* TextField+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Ext.swift"; sourceTree = "<group>"; };
 		13EEA67829E30FFE00A9C0FC /* CashBalanceViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashBalanceViewVC.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 		130532A32AFEA3F100207064 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				137169602B150EF50003D992 /* AlertViews */,
 				130532A92B02168B00207064 /* Cells */,
 				130532A52B02163D00207064 /* TextFields */,
 				130532A62B02164800207064 /* Labels */,
@@ -184,6 +187,14 @@
 				1371695E2B112DD20003D992 /* VatBalanceViewVC.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		137169602B150EF50003D992 /* AlertViews */ = {
+			isa = PBXGroup;
+			children = (
+				137169612B150F220003D992 /* VTAlertVC.swift */,
+			);
+			path = AlertViews;
 			sourceTree = "<group>";
 		};
 		13AFA3B42B03C2FC000D5D51 /* Utilities */ = {
@@ -340,6 +351,7 @@
 				136A416629E09351008BFFB1 /* MainVC.swift in Sources */,
 				136A414F29E09131008BFFB1 /* AppDelegate.swift in Sources */,
 				130532AD2B0218B700207064 /* VTIncoiceListCellLabel.swift in Sources */,
+				137169622B150F220003D992 /* VTAlertVC.swift in Sources */,
 				136A415929E09131008BFFB1 /* VATTracker.xcdatamodeld in Sources */,
 				13AFA3B62B03C30D000D5D51 /* DateToString.swift in Sources */,
 				1305329E2AFE96BF00207064 /* VTTextField.swift in Sources */,

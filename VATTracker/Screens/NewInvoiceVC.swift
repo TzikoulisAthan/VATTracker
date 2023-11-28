@@ -145,7 +145,7 @@ class NewInvoiceVC: UIViewController {
         }
         
         radioGroup.selectedIndex = 0
-        invoiceIssuerTextField.becomeFirstResponder()
+        
     }
     
     

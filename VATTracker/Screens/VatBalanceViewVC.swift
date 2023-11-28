@@ -10,8 +10,6 @@ import UIKit
 class VatBalanceViewVC: UIViewController {
     
     //MARK: - Variables
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
     var invoiceList = [Invoice]()
     
     //MARK: - UI Components
@@ -46,6 +44,15 @@ class VatBalanceViewVC: UIViewController {
         return label
     }()
     
+    let payVatButton: UIButton = {
+        let button = VTButton(buttonTitle: "Pay VAT", color: .systemGreen, type: .system)
+        button.setTitleColor(.red, for: .normal)
+        button.titleLabel?.adjustsFontSizeToFitWidth = true
+        button.titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline)
+        button.addTarget(self, action: #selector(payVatButtonPressed), for: .touchUpInside)
+        return button
+    }()
+    
     //MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -62,6 +69,7 @@ class VatBalanceViewVC: UIViewController {
     
     private func calculateVat() {
         
+        //TODO: Dispatchqueue here?
         invoiceList = DataFunctions.loadInvoices()
         let vatBalance = DataFunctions.getTotalVatAmount(list: invoiceList)
         let absoluteVatBalance = abs(vatBalance)
@@ -69,15 +77,54 @@ class VatBalanceViewVC: UIViewController {
         vatAmountLabel.text = vatBalanceString
         
         if vatBalance < 0 {
-            statusLabel.text = "Output"
+            statusLabel.text = "Input > Output"
         } else {
-            statusLabel.text = "Input"
+            statusLabel.text = "Output > Input"
         }
+    }
+    
+    
+    //MARK: - Selectors
+    
+    @objc func payVatButtonPressed() {
+        
+        invoiceList = DataFunctions.loadInvoices()
+        let currentVatAmount = DataFunctions.getTotalVatAmount(list: invoiceList)
+        
+        if currentVatAmount > 0 {
+            let alert = UIAlertController(title: "New VAT payment", message: "\nYou are about to make a new VAT payment.\n\nAction is irreversible.\n\nAre you sure?",
+                                          preferredStyle: .alert)
+            
+            
+            let alertAction = UIAlertAction(title: "Pay", style: .default) { action in
+                DispatchQueue.main.async {
+                    let alert = VTAlertVC()
+                    alert.modalPresentationStyle = .overFullScreen
+                    alert.modalTransitionStyle = .crossDissolve
+                    self.present(alert, animated: true)
+                }
+            }
+            
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+            alert.addAction(alertAction)
+            present(alert, animated: true)
+            
+        } else {
+            let alert = UIAlertController(title: "No payment needed!", message: "Cannot make payment! VAT input is greater than VAT output.", preferredStyle: .alert)
+            
+            let alertAction = UIAlertAction(title: "Ok", style: .cancel)
+            
+            alert.addAction(alertAction)
+            present(alert, animated: true)
+        }
+        
+        
+        
     }
     
     //MARK: - UI Setup
     private func setupUI() {
-        let views = [vatStatusLabel, statusLabel, vatLabel, vatAmountLabel]
+        let views = [vatStatusLabel, statusLabel, vatLabel, vatAmountLabel, payVatButton]
         
         for everyView in views {
             view.addSubview(everyView)
@@ -111,7 +158,15 @@ class VatBalanceViewVC: UIViewController {
             vatAmountLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
             vatAmountLabel.widthAnchor.constraint(equalToConstant: labelWidth/2),
             vatAmountLabel.heightAnchor.constraint(equalToConstant: labelHeight),
+            
+            payVatButton.topAnchor.constraint(equalTo: vatAmountLabel.bottomAnchor, constant: padding*2),
+            payVatButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            payVatButton.widthAnchor.constraint(equalToConstant: 100),
+            payVatButton.heightAnchor.constraint(equalToConstant: 50),
         ])
     }
     
 }
+
+
+
