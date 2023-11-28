@@ -49,7 +49,16 @@ class VatBalanceViewVC: UIViewController {
         button.setTitleColor(.red, for: .normal)
         button.titleLabel?.adjustsFontSizeToFitWidth = true
         button.titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline)
-        button.addTarget(self, action: #selector(payVatButtonPressed), for: .touchUpInside)
+        button.addTarget(VatBalanceViewVC.self, action: #selector(payVatButtonPressed), for: .touchUpInside)
+        return button
+    }()
+    
+    let receiveVatButton: UIButton = {
+        let button = VTButton(buttonTitle: "Receive VAT", color: .systemBlue, type: .system)
+        button.setTitleColor(.red, for: .normal)
+        button.titleLabel?.adjustsFontSizeToFitWidth = true
+        button.titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline)
+        button.addTarget(VatBalanceViewVC.self, action: #selector(receiveVatButtonPressed), for: .touchUpInside)
         return button
     }()
     
@@ -98,7 +107,7 @@ class VatBalanceViewVC: UIViewController {
             
             let alertAction = UIAlertAction(title: "Pay", style: .default) { action in
                 DispatchQueue.main.async {
-                    let alert = VTAlertVC()
+                    let alert = VTAlertVC(alertTitle: "Make VAT payment")
                     alert.modalPresentationStyle = .overFullScreen
                     alert.modalTransitionStyle = .crossDissolve
                     self.present(alert, animated: true)
@@ -110,7 +119,7 @@ class VatBalanceViewVC: UIViewController {
             present(alert, animated: true)
             
         } else {
-            let alert = UIAlertController(title: "No payment needed!", message: "Cannot make payment! VAT input is greater than VAT output.", preferredStyle: .alert)
+            let alert = UIAlertController(title: "No payment needed!", message: "Cannot make payment! Input VAT is greater than output VAT.", preferredStyle: .alert)
             
             let alertAction = UIAlertAction(title: "Ok", style: .cancel)
             
@@ -118,13 +127,45 @@ class VatBalanceViewVC: UIViewController {
             present(alert, animated: true)
         }
         
+    }
+    
+    
+    @objc func receiveVatButtonPressed() {
+        invoiceList = DataFunctions.loadInvoices()
+        let currentVatAmount = DataFunctions.getTotalVatAmount(list: invoiceList)
         
+        if currentVatAmount < 0 {
+            let alert = UIAlertController(title: "New VAT payment", message: "\nYou are about to receive a new VAT payment.\n\nAction is irreversible.\n\nAre you sure?",
+                                          preferredStyle: .alert)
+            
+            
+            let alertAction = UIAlertAction(title: "Receive", style: .default) { action in
+                DispatchQueue.main.async {
+                    let alert = VTAlertVC(alertTitle: "Receive VAT payment")
+                    alert.modalPresentationStyle = .overFullScreen
+                    alert.modalTransitionStyle = .crossDissolve
+                    self.present(alert, animated: true)
+                }
+            }
+            
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+            alert.addAction(alertAction)
+            present(alert, animated: true)
+            
+        } else {
+            let alert = UIAlertController(title: "Cannot receive!", message: "Cannot receive payment! Output VAT is greater than input VAT.", preferredStyle: .alert)
+            
+            let alertAction = UIAlertAction(title: "Ok", style: .cancel)
+            
+            alert.addAction(alertAction)
+            present(alert, animated: true)
+        }
         
     }
     
     //MARK: - UI Setup
     private func setupUI() {
-        let views = [vatStatusLabel, statusLabel, vatLabel, vatAmountLabel, payVatButton]
+        let views = [vatStatusLabel, statusLabel, vatLabel, vatAmountLabel, payVatButton, receiveVatButton]
         
         for everyView in views {
             view.addSubview(everyView)
@@ -134,9 +175,9 @@ class VatBalanceViewVC: UIViewController {
         view.backgroundColor = UIColor(red: 0.2941, green: 0.5765, blue: 0.949, alpha: 0.7)
         
         let padding: CGFloat = 10
-        let linePadding: CGFloat = 30
         let labelWidth = view.frame.size.width
         let labelHeight: CGFloat = 50
+        let containerWidth: CGFloat = view.frame.size.width
         
         NSLayoutConstraint.activate([
             vatStatusLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: padding),
@@ -160,9 +201,14 @@ class VatBalanceViewVC: UIViewController {
             vatAmountLabel.heightAnchor.constraint(equalToConstant: labelHeight),
             
             payVatButton.topAnchor.constraint(equalTo: vatAmountLabel.bottomAnchor, constant: padding*2),
-            payVatButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            payVatButton.widthAnchor.constraint(equalToConstant: 100),
+            payVatButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
+            payVatButton.widthAnchor.constraint(equalToConstant: containerWidth/3),
             payVatButton.heightAnchor.constraint(equalToConstant: 50),
+            
+            receiveVatButton.topAnchor.constraint(equalTo: vatAmountLabel.bottomAnchor, constant: padding*2),
+            receiveVatButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
+            receiveVatButton.widthAnchor.constraint(equalToConstant: containerWidth/3),
+            receiveVatButton.heightAnchor.constraint(equalToConstant: 50),
         ])
     }
     

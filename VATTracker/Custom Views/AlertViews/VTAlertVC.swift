@@ -8,9 +8,6 @@
 import UIKit
 
 class VTAlertVC: UIViewController {
-
-    //MARK: - Variables
-    
     
     //MARK: - UI Components
     let containerView = UIView()
@@ -52,7 +49,17 @@ class VTAlertVC: UIViewController {
         configureContainerView()
         setupUI()
     }
-
+    
+    //MARK: - Initializers
+    init(alertTitle: String) {
+        super.init(nibName: nil, bundle: nil)
+        self.titleLabel.text = alertTitle
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     //MARK: - UI Setup
     private func configureContainerView() {
         view.addSubview(containerView)
