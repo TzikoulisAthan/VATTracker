@@ -10,6 +10,8 @@ import CoreData
 
 struct DataFunctions {
     
+    //MARK: - Invoice table Methods
+    
     static func loadInvoices() -> [Invoice] {
         
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -64,6 +66,41 @@ struct DataFunctions {
         
         
         return totalVatAmount
+    }
+    
+    
+    //MARK: - Payment table Methods
+    
+    static func loadPayments() -> [Payments] {
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        var paymentsList: [Payments] = []
+        
+        
+        let request = Payments.fetchRequest()
+        
+        do {
+            paymentsList = try context.fetch(request)
+        } catch {
+            print("Error fetching data\(error)")
+        }
+        
+        return paymentsList
+    }
+    
+    static func getTotalPaymentsAmount(list: [Payments]) -> Double {
+        var totalPaymentsAmount: Double = 0
+        
+        if list.count-1 >= 0 {
+            for i in 0...list.count-1 {
+                totalPaymentsAmount += Double(list[i].amount ?? "0")!
+            }
+        } else {
+            print("Invoice list is empty")
+        }
+        
+        return totalPaymentsAmount
     }
     
 }

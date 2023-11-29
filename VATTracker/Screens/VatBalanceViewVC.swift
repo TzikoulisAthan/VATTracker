@@ -11,6 +11,7 @@ class VatBalanceViewVC: UIViewController {
     
     //MARK: - Variables
     var invoiceList = [Invoice]()
+    var paymentsList = [Payments]()
     
     //MARK: - UI Components
     let vatStatusLabel: UILabel = {
@@ -62,6 +63,15 @@ class VatBalanceViewVC: UIViewController {
         return button
     }()
     
+    let showPaymentsListButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("List of VAT transactions", for: .normal)
+        button.setTitleColor(UIColor(red: 0, green: 0.0824, blue: 0.8392, alpha: 1.0), for: .normal)
+        button.titleLabel?.font = UIFont(name: "Arial", size: 15)
+        button.addTarget(self, action: #selector(showTransactionsList), for: .touchUpInside)
+        return button
+    }()
+    
     //MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -80,7 +90,13 @@ class VatBalanceViewVC: UIViewController {
         
         //TODO: Dispatchqueue here?
         invoiceList = DataFunctions.loadInvoices()
-        let vatBalance = DataFunctions.getTotalVatAmount(list: invoiceList)
+        paymentsList = DataFunctions.loadPayments()
+        
+        let vatAmountBalance = DataFunctions.getTotalVatAmount(list: invoiceList)
+        let vatPaymentsBalance = DataFunctions.getTotalPaymentsAmount(list: paymentsList)
+        
+        let vatBalance = vatAmountBalance + vatPaymentsBalance
+        
         let absoluteVatBalance = abs(vatBalance)
         let vatBalanceString = String(format: "%.2f", vatBalance)
         vatAmountLabel.text = vatBalanceString
@@ -167,9 +183,17 @@ class VatBalanceViewVC: UIViewController {
         
     }
     
+    
+    @objc func showTransactionsList() {
+        let vc = VATTransactionsVC()
+//        vc.modalPresentationStyle = .overFullScreen
+        
+        present(vc, animated: true)
+    }
+    
     //MARK: - UI Setup
     private func setupUI() {
-        let views = [vatStatusLabel, statusLabel, vatLabel, vatAmountLabel, payVatButton, receiveVatButton]
+        let views = [vatStatusLabel, statusLabel, vatLabel, vatAmountLabel, payVatButton, receiveVatButton, showPaymentsListButton]
         
         for everyView in views {
             view.addSubview(everyView)
@@ -213,6 +237,10 @@ class VatBalanceViewVC: UIViewController {
             receiveVatButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
             receiveVatButton.widthAnchor.constraint(equalToConstant: containerWidth/3),
             receiveVatButton.heightAnchor.constraint(equalToConstant: 50),
+            
+            showPaymentsListButton.topAnchor.constraint(equalTo: payVatButton.bottomAnchor, constant: padding),
+            showPaymentsListButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            showPaymentsListButton.heightAnchor.constraint(equalToConstant: 20)
         ])
     }
     
